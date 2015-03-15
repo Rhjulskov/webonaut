@@ -8,7 +8,56 @@
   padding: 0;
 }
 
+
+
 .wrapper {
   @include outer-container;
-  padding-bottom: 70px;
+}
+
+$btn-size: 10px;
+$browser-height: 30px;
+
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    -webkit-filter: opacity(black);
+    font-family: "blokk";
+  }
+  @page { 
+    margin: 0.5cm; 
+  }
+  h1 {
+    display: block;
+  }
+  body {
+    font-family: helvetica;
+    position: relative;
+    padding-top: $browser-height;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: " ";
+      width: 100%;
+      background: #D3D3D3;
+      height: $browser-height;
+      border-radius: 5px 5px 0 0;
+    }
+  
+   
+    &:before { 
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 14px;
+      height: $btn-size;
+      width: $btn-size;
+      border-radius: 50%;
+      background-color: crimson;
+      box-shadow: 18px 0px 0px 0px #E6A935, 36px 0px 0px 0px #85C33D;
+      z-index: 1;
+    }
+  }
+
 }

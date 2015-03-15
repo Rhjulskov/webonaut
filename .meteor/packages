@@ -6,7 +6,6 @@
 
 meteor-platform
 startup
-fourseven:scss
 wolves:bourbon
 wolves:neat
 wolves:bitters
@@ -24,3 +23,5 @@ meteorhacks:npm
 
 npm-container
 manuelschoebel:wait-on-lib
+rhjulskov:prototype
+fourseven:scss

@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #ribbon
+\*------------------------------------*/
+
+@import "../../../stylesheets/init";
+
+.ribbon {
+  @extend %gray4;
+  position: relative;
+  z-index: 1;
+  height: 400px;
+
+  .wrapper {
+    height: 100%;
+  }
+
+}

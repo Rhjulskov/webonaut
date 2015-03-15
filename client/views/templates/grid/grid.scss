@@ -1,9 +1,10 @@
 /*------------------------------------*\
-    #frontpage
+    #grid
 \*------------------------------------*/
 
 @import "../../../stylesheets/init";
 
-.textarea {
-  padding: 60px 0;
+.grid {
+  @include clearfix;
+  padding: 30px 0;
 }

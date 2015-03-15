@@ -1,9 +1,10 @@
 /*------------------------------------*\
-    #frontpage
+    #footer
 \*------------------------------------*/
 
 @import "../../../stylesheets/init";
 
-.textarea {
-  padding: 60px 0;
+.footer {
+  @extend %gray6;
+  height: 180px;
 }
