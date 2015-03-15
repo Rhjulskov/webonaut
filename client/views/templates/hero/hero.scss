@@ -13,14 +13,6 @@
   width: 100%;
   z-index: -1;
   
-  img {
-    position: relative;
-    display: block;
-    padding: 120px 0 20px 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
   .hero-header {
     font-size: 90px;
     text-align: center;
@@ -128,6 +120,15 @@
         margin-left: 200px;
         width: 90px;
         height: 90px
+      }
+
+      &:nth-child(5) {
+        @extend %gray3;
+        left: 50%;
+        top: 310px;
+        margin-left: 320px;
+        width: 40px;
+        height: 40px
       }
 
       &:nth-child(6) {
