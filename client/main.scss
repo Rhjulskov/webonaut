@@ -8,10 +8,19 @@
   padding: 0;
 }
 
-
+body {
+  color: $color-gray-8;
+}
 
 .wrapper {
   @include outer-container;
+  padding: 0 12px;
+}
+
+.centered {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 $btn-size: 10px;

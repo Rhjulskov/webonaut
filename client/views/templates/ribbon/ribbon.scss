@@ -8,10 +8,15 @@
   @extend %gray4;
   position: relative;
   z-index: 1;
-  height: 400px;
+  text-align: center;
 
   .wrapper {
     height: 100%;
+    padding: 40px 200px;
+  }
+
+  p {
+    margin: 20px 0;
   }
 
 }
