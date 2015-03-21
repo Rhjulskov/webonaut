@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #textarea
+\*------------------------------------*/
+
+@import "../../../stylesheets/init";
+
+.textarea {
+  padding: 30px;
+
+  p {
+   width: 80%;
+   margin: 20px auto; 
+  }
+}
+
+.headline {
+  width: 50%;
+  font-size: 100px;
+  line-height: 0.8em;
+  margin: 20px 0;
+}
+
+.subtitle {
+  width: 50%;
+  margin: 2 0px 0;
+}

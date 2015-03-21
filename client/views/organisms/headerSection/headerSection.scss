@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #headerSection
+\*------------------------------------*/
+
+@import "../../../stylesheets/init";
+
+.header-section {
+   @include clearfix;
+  
+  .header-section__background {
+    background: $color-primary;
+    @include span-columns(9);
+    float: right;
+    height: 350px;
+    margin: 20px 0;
+  }
+
+  .header-section__text {
+    @extend %vertical-align;
+    width: 400px;
+    margin-left: -200px;
+  }
+}

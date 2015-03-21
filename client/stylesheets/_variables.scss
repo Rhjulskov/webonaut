@@ -60,6 +60,13 @@ $width-hero: 1500px;
 // Custom --------------------------------------------------------- //
 $header-height: 60px;
 
+$border-size: 20px;
+
+
+$color-blue: #5A6BA0;
+$color-red: #E64675;
+
+
 
 // Prototype --------------------------------------------------------- //
 
@@ -73,6 +80,11 @@ $color-gray-4: #999999; //rgba(0,0,0,.4)
 $color-gray-3: #b2b2b2; //rgba(0,0,0,.3)
 $color-gray-2: #cccccc; //rgba(0,0,0,.2)
 $color-gray-1: #e5e5e5; //rgba(0,0,0,.1)
+
+$color-primary: $color-gray-7;
+$color-secondary: $color-gray-6;
+
+
 
 %gray10 {
   background-color: $color-gray-10;

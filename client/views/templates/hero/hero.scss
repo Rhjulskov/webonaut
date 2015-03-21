@@ -38,6 +38,7 @@
 
       &:nth-child(1) {
         @extend %gray5;
+
         left: 50%;
         top: 240px;
         margin-left: -500px;
@@ -72,6 +73,7 @@
 
       &:nth-child(2) {
         @extend %gray4;
+        background: $color-primary;
         left: 50%;
         top: 150px;
         margin-left: -400px;
@@ -93,6 +95,7 @@
 
       &:nth-child(3) {
         @extend %gray3;
+        background: $color-secondary;
         left: 50%;
         top: 140px;
         border: 6px solid $color-gray-8;

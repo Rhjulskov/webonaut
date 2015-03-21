@@ -5,10 +5,10 @@
 @import "../../../stylesheets/init";
 
 .header {
-  @extend %gray7;
+  color: $color-primary;
   position: fixed;
   z-index: 100;
-  top: 0; 
+  top: $border-size; 
   left: 0;
   width: 100%;
   height: $header-height;
@@ -20,6 +20,7 @@
     font-family: "helvetica";
     color: currentColor;
     line-height: $header-height;
+    padding-left: $border-size*2; 
   }
 
   .header__menu {

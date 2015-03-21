@@ -1,9 +1,8 @@
 <template name="frontpage">
+  {{> border}}
   {{> hero }}
-  {{> ribbon }}
+  {{> ribbon}}
   {{> grid}}
-  <div class="wrapper textarea">
-    <h1>{{hero_title}}</h1>
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque repellendus tempore obcaecati distinctio incidunt ratione alias iure aut. Molestias nihil, alias neque sint, suscipit consequuntur eveniet quos dolores esse!</span><span>Blanditiis commodi iusto, rerum harum fugit ex, cupiditate cumque iure, deleniti hic vitae nulla nisi maxime doloribus delectus molestias eius perspiciatis totam? Officia rerum corporis velit, voluptatibus, assumenda commodi reprehenderit!</span></p>
-  </div>
+  {{> headerSection}}
+  {{> textarea headline=hero_title}}
 </template>
