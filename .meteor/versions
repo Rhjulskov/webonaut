@@ -37,6 +37,7 @@ livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
 manuelschoebel:wait-on-lib@0.3.0
+markdown@1.0.4
 matb33:collection-hooks@0.7.6
 meteor@1.1.5
 meteor-platform@1.2.2
@@ -64,6 +65,7 @@ routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
 sewdn:collection-behaviours@0.2.0
+simple:highlight.js@1.0.9
 spacebars@1.0.6
 spacebars-compiler@1.0.5
 startup@1.0.3

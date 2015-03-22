@@ -1,0 +1,78 @@
+<template name="styleguide">
+  <div class="sg-wrapper">
+
+    {{> sgheader header="Colors"}}
+    <ul class="sg-colors">
+      {{#each colors}}
+        <li>
+          <div class="sg-color" style="background-color:{{color}}">
+          </div>
+          <div class="sg-color__text">
+            <p>{{name}}</p>
+            <p>{{color}}</p>
+            {{#if var}}
+              {{#markdown}}
+    {{var}}
+              {{/markdown}}
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+
+    {{> sgheader header="Fonts"}}
+    <h1>h1 styling</h1>
+    <h2>h2 styling</h2>
+    <h3>h3 styling</h3>
+    <h4>h4 styling</h4>
+    <h5>h5 styling</h5>
+    <h6>h6 styling</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque veritatis quis, voluptates asperiores molestias consequuntur sequi impedit, repellendus soluta eligendi voluptatum placeat nesciunt explicabo, officia nihil, architecto voluptas quidem aut.</p>
+
+
+    {{#markdown}}
+    <!-- use h1's for everything -->
+    <h1>h1 styling</h1>
+    <h2>h2 styling</h2>
+    <h3>h3 styling</h3>
+    <h4>h4 styling</h4>
+    <h5>h5 styling</h5>
+    <h6>h6 styling</h6>
+    {{/markdown}}
+
+
+    {{> sgheader header="Inline elements"}}
+    <p><a>This is a text link</a></p>
+    <p><strong>Strong is used to indicate strong importance</strong></p>
+    <p><i>This text has added emphasis</i></p>
+
+    {{#each atoms}}
+      <div class="sg-element">
+        {{> sgheader header=this}}
+        <div class="sg-element">
+          {{> Template.dynamic template=this}}
+        </div>
+
+        <div class="expander">
+          <a href="javascript:void(0)"  class="expander-trigger expander-hidden">Show code</a>
+          <div class="sg-element__code expander-content">
+          {{#markdown}}
+```html
+{{ escaped this}}
+```
+{{/markdown}}
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
+
+  </div>
+</template>
+
+
+<template name="sgheader">
+  <div class="sg-line-behind-text">
+    <h6>{{header}}</h6>
+  </div>
+</template>

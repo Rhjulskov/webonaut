@@ -5,6 +5,23 @@
 @import "../../../stylesheets/init";
 
 .footer {
-  @extend %gray6;
-  height: 180px;
+  ul {
+    @include clearfix;
+    li {
+      @include span-columns(4);
+      height: 80px;
+
+      &:nth-child(1) {
+        @extend %gray6;
+      }
+
+      &:nth-child(2) {
+        @extend %gray5;
+      }
+
+      &:nth-child(3) {
+        @extend %gray4;
+      }
+    }
+  }
 }
