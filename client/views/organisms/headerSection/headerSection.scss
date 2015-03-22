@@ -9,15 +9,33 @@
   
   .header-section__background {
     background: $color-primary;
-    @include span-columns(9);
-    float: right;
     height: 350px;
     margin: 20px 0;
+
+    @include mq($until: tablet) {
+      padding: 0 $padding-size;
+      @include span-columns(11);
+      float: right;
+    }
+    
+    @include mq($from: tablet) {
+      @include span-columns(9);
+      float: right;
+    } 
+    
   }
 
   .header-section__text {
     @extend %vertical-align;
-    width: 400px;
-    margin-left: -200px;
+    width: 100%;
+    max-width: 400px;
+
+    @include mq($until: tablet) {
+      @include transform(translateY(-50%));
+    }
+
+    @include mq($from: tablet) {
+      @include transform(translateX(-50%) translateY(-50%));
+    }    
   }
 }

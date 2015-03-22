@@ -4,6 +4,8 @@
     {{> instagram}}
     {{> instagram}}
     {{> twitter}}
-    {{> codepen}}
+    {{#each codepens}}
+      {{> codepen src=src}}
+    {{/each}}
   </div>
 </template>
