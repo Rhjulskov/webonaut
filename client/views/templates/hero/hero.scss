@@ -4,6 +4,14 @@
 
 @import "../../../stylesheets/init";
 
+%planet {
+  position: absolute;
+  border-radius: 90%;
+  border: 4px solid $color-gray-8;
+  @include transform( translateX(-50%) translateY(50%))
+}
+
+
 .hero {
   @extend %gray2;
   color: $color-gray-1;
@@ -27,25 +35,44 @@
     margin: 0 auto;
   }
 
-  .header__planets {
+  .planets {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     list-style: none;
+
     li {
-
-      border-radius: 90%;
-      border: 4px solid $color-gray-8;
       position: absolute;
-      list-style: none;
-      z-index: -1;
-
+      width: 100%;
+      height: 100%;
+  
       &:nth-child(1) {
-        @extend %gray5;
+        z-index: 3;
+      }
 
+      &:nth-child(2) {
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        z-index: 1;
+      }
+
+
+      .planet-1 {
+        @extend %planet;
+        @extend %gray5;
+        position: absolute;
+        bottom: -20%;
         left: 50%;
-        top: 240px;
-        margin-left: -500px;
-        padding-bottom: 78.7%;
         width: 80%;
         max-width: 1000px;
+        padding-top: 69.3%;
+        
+        
         overflow: hidden;
         box-shadow: 20px 20px 0 0 rgba(0,0,0, .1), -20px 20px 0 0 rgba(0,0,0, .1);
 
@@ -72,12 +99,12 @@
         }
       }
 
-      &:nth-child(2) {
+      .planet-2 {
+        @extend %planet;
         @extend %gray4;
         background: $color-primary;
-        left: 50%;
-        top: 150px;
-        margin-left: -400px;
+        left: 20%;
+        top: 10%;
         width: 160px;
         height: 160px;
         &:before {
@@ -85,7 +112,7 @@
           content: "";
           position: absolute;
           top: 20%;
-          left: 30%;
+          left: 20%;
           height: 4px;
           width: 40px;
           border-radius: 2px;
@@ -94,13 +121,22 @@
         }
       }
 
-      &:nth-child(3) {
+      .planet-3 {
+        @extend %planet;
+        @extend %gray5;
+        left: 80%;
+        top: 20%;
+        width: 230px;
+        height: 230px
+      }
+
+      .planet-4 {
+        @extend %planet;
         @extend %gray3;
         background: $color-secondary;
-        left: 50%;
-        top: 140px;
+        left: 30%;
+        top: 5%;
         border: 6px solid $color-gray-8;
-        margin-left: -230px;
         width: 80px;
         height: 80px;
         &:after {
@@ -117,38 +153,29 @@
         } 
       }
 
-      &:nth-child(4) {
+      .planet-5 {
+        @extend %planet;
         @extend %gray3;
-        left: 50%;
-        top: 70px;
-        margin-left: 200px;
+        left: 65%;
+        top: 25%;
         width: 90px;
         height: 90px
       }
 
-      &:nth-child(5) {
+      .planet-6 {
+        @extend %planet;
         @extend %gray3;
-        left: 50%;
-        top: 310px;
-        margin-left: 320px;
+        left: 60%;
+        top: 15%;
         width: 40px;
         height: 40px
       }
 
-      &:nth-child(6) {
-        @extend %gray5;
-        left: 50%;
-        top: 70px;
-        margin-left: 200px;
-        width: 230px;
-        height: 230px
-      }
-
-      &:nth-child(7) {
+      .planet-7 {
+        @extend %planet;
         @extend %gray3;
-        left: 50%;
-        top: 140px;
-        margin-left: -100px;
+        left: 40%;
+        top: 15%;
         width: 40px;
         height: 40px
       }

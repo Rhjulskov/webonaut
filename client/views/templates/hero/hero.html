@@ -1,17 +1,30 @@
 <template name="hero">
   <div class="hero">
-    <!-- {{img "260x260" "666666" }} -->
-    {{> logo}}
-    <h1 class="hero-header">Heoosss</h1>
-    <h2 class="hero-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque at a hic reprehenderit aliquam illum</h2>
-    <ul class="header__planets">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+    
+    <ul class="planets" id="scene">
+      <li class="layer" data-depth="0.1">
+        {{> logo}}
+        <h1 class="hero-header">Heoosss</h1>
+        <h2 class="hero-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque at a hic reprehenderit aliquam illum</h2>
+      </li>
+      <li class="layer" data-depth="0.3">
+        <div class="planet-1"></div>
+      </li>
+      <li class="layer" data-depth="0.5">
+        <div class="planet-2"></div>
+        <div class="planet-3"></div>
+      </li>
+      <li class="layer" data-depth="0.7">
+        <div class="planet-4"></div>
+        <div class="planet-5"></div>
+        
+      </li>
+      <li class="layer" data-depth="0.9">
+        <div class="planet-6"></div>
+        <div class="planet-7"></div>
+        
+      </li>
+
     </ul>
   </div>
 </template>

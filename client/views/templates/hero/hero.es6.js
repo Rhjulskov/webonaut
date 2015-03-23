@@ -2,4 +2,10 @@ Template['hero'].helpers({
 });
 
 Template['hero'].events({
+
 });
+
+Template['hero'].rendered = function () {
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+};

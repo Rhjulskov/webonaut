@@ -4,6 +4,7 @@ Template['frontpage'].helpers({
 });
 
 Template['frontpage'].events({
+  
 });
 
 
