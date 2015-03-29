@@ -14,13 +14,13 @@ Template['styleguide'].helpers({
     },
     {
       "name": "primary-color",
-      "var": "primary-color",
-      "color": "#939598"
+      "var": "$color-yellow",
+      "color": "#FFF05E"
     },
     {
       "name": "primary-color",
-      "var": "primary-color",
-      "color": "#808285"
+      "var": "$color-blue-dark",
+      "color": "#2F3549"
     },
     {
       "name": "primary-color",

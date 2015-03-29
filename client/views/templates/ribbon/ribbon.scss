@@ -5,7 +5,11 @@
 @import "../../../stylesheets/init";
 
 .ribbon {
+  .test & {
+    background-color: $color-yellow;
+  }
   @extend %gray4;
+  @include linear-gradient(black, white);
   position: relative;
   z-index: 1;
   text-align: center;

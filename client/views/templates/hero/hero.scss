@@ -4,6 +4,7 @@
 
 @import "../../../stylesheets/init";
 
+
 %planet {
   position: absolute;
   border-radius: 90%;
@@ -11,9 +12,20 @@
   @include transform( translateX(-50%) translateY(50%))
 }
 
+@include keyframes(earth) {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -193% 0px;
+  }
+}
+
 
 .hero {
   @extend %gray2;
+  background: url("/top.jpg");
+  background-size: cover;
   color: $color-gray-1;
   position: relative;
   overflow: hidden;  
@@ -48,65 +60,95 @@
       position: absolute;
       width: 100%;
       height: 100%;
+
+      
   
       &:nth-child(1) {
-        z-index: 3;
+        z-index: 5;
+        background-size: 10%;
+        background-image: url("http://rachouanrejeb.be/weather/images/assets/stars.png");
       }
 
       &:nth-child(2) {
-        z-index: 2;
+        z-index: 4;
+        background-size: 22%;
+        background-image: url("http://rachouanrejeb.be/weather/images/assets/stars.png");
       }
 
       &:nth-child(3) {
         z-index: 1;
+        background-size: 30%;
+        background-image: url("http://rachouanrejeb.be/weather/images/assets/stars.png");
+      }
+
+      &:nth-child(4) {
+        z-index: 2;
+        background-size: 12%;
+      }
+
+      &:nth-child(5) {
+        z-index: 1;
+        background-size: 80%;
+        background-image: url("http://rachouanrejeb.be/weather/images/assets/stars.png");
       }
 
 
       .planet-1 {
         @extend %planet;
         @extend %gray5;
+        background-image: url("/low-poly.png");
+        background-color: rgba(0,0,0,.8);
+        background-size: cover;
+        background-position: top left;
+        background-repeat: repeat-x;
+
+        &:hover {
+          background-color: rgba(0,0,0,.2);
+        }
+
         position: absolute;
+        z-index: 10;
         bottom: -20%;
         left: 50%;
         width: 80%;
         max-width: 1000px;
         padding-top: 69.3%;
         
-        
         overflow: hidden;
         box-shadow: 20px 20px 0 0 rgba(0,0,0, .1), -20px 20px 0 0 rgba(0,0,0, .1);
 
-        &:before {
-          @extend %gray4;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 3%;
-          width: 100%;
-          height: 100%;
-          border-radius: 90%;
-        }
+        // &:before {
+        //   @extend %gray4;
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 3%;
+        //   width: 100%;
+        //   height: 100%;
+        //   border-radius: 90%;
+        // }
 
-        &:after {
-          @extend %gray3;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 8%;
-          width: 100%;
-          height: 100%;
-          border-radius: 90%;
-        }
+        // &:after {
+        //   @extend %gray3;
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 8%;
+        //   width: 100%;
+        //   height: 100%;
+        //   border-radius: 90%;
+        // }
       }
 
       .planet-2 {
         @extend %planet;
         @extend %gray4;
-        background: $color-primary;
+        @include radial-gradient( #A16D94 , $color-blue);
         left: 20%;
         top: 10%;
         width: 160px;
         height: 160px;
+        
         &:before {
           color: $color-gray-8;
           content: "";
@@ -124,6 +166,7 @@
       .planet-3 {
         @extend %planet;
         @extend %gray5;
+        @include linear-gradient(45deg, $color-yellow, $color-blue-dark);  
         left: 80%;
         top: 20%;
         width: 230px;
@@ -133,7 +176,7 @@
       .planet-4 {
         @extend %planet;
         @extend %gray3;
-        background: $color-secondary;
+        @include linear-gradient(45deg, $color-blue-dark , $color-blue);  
         left: 30%;
         top: 5%;
         border: 6px solid $color-gray-8;
@@ -156,6 +199,7 @@
       .planet-5 {
         @extend %planet;
         @extend %gray3;
+        @include linear-gradient(45deg, #C7C9DD , #A16D94);  
         left: 65%;
         top: 25%;
         width: 90px;
@@ -165,6 +209,7 @@
       .planet-6 {
         @extend %planet;
         @extend %gray3;
+        @include linear-gradient(45deg, #A16D94 , $color-red);  
         left: 60%;
         top: 15%;
         width: 40px;
@@ -174,6 +219,7 @@
       .planet-7 {
         @extend %planet;
         @extend %gray3;
+        @include linear-gradient(45deg, $color-blue , #A3A8C9);  
         left: 40%;
         top: 15%;
         width: 40px;
