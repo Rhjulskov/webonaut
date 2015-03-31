@@ -5,14 +5,76 @@
 @import "../../../stylesheets/init";
 
 .instagram {
-  @extend %gray3;
+  @include clearfix;
+  position: relative;
+  .image {
+    position: relative;
+    height: 400px;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%; 
+    @include transition(.2s all ease-in-out);   
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0);  
+    background-image: url("http://lorempixel.com/300/400/technics/");
+    background-color: $color-blue;
+    background-blend-mode: luminosity; // lighten, luminosity
+
+  }
+  h3 {
+    color: black;
+    position: absolute;
+    width: 40%;
+    top:45%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    @include transition(.2s all ease-in-out);
+  }
+
+  &:hover {
+    .image {
+      background-color: $color-red;
+      @include transform(scale(1.1));
+      box-shadow: -20px 20px 0px 0px $color-blue;
+    }
+    h3 {
+      left: 75%;
+    }
+  }
 }
 
 .grid-element {
-  @extend %gray4;
-  @include span-columns(3);
-  @include omega(4n);
-  height: 120px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  @include clearfix;
+
+  @include mq($until: tablet) {
+    @include span-columns(12);  
+    &:nth-child(2n){
+      .image {
+        float: right;
+      }
+    }
+  } 
+  
+  @include mq($from: tablet) {
+    @include span-columns(6);
+
+    &:nth-child(3n){
+      margin: 0 25%;
+    }  
+  } 
+
+
+  &--right {
+    @extend %gray7; 
+  
+
+    img {
+      float: right;
+    }
+
+    h3 {
+      left: 25%;
+      top: 50%;
+    }
+  }
 }

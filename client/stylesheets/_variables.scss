@@ -3,7 +3,7 @@
 $column: 90px;
 $gutter: 0px;
 $grid-columns: 12;
-$max-width: em(1088);
+$max-width: 1200px;
 
 // Toggle to false to hide grid.
 $visual-grid: false;
@@ -30,11 +30,11 @@ $default-transition-delay:    false;
 
 // Typography ----------------------------------------------------- //
 
-$base-font-family: "museo-slab", Georgia, serif;
+$base-font-family: 'Lato', sans-serif;
 $base-font-size:  16px;
-$base-line-height: 26px;
+$base-line-height: 1.8em;
 
-
+$alt-font-family: 'Playfair Display', serif;
 
 // Colors --------------------------------------------------------- //
 // Adjust via http://hslpicker.com
@@ -58,13 +58,17 @@ $width-container: $width-container-inner + 2 * $width-container-padding;
 $width-hero: 1500px;
 
 // Custom --------------------------------------------------------- //
-$header-height: 60px;
+$header-height: 80px;
 
 $padding-size: 10px;
 $border-size: 20px;
 
 
+
 $color-blue: #5A6BA0;
+$color-blue-light: tint($color-blue, 10%);
+$color-blue-dark: shade($color-blue, 10%);
+
 $color-red: #E64675;
 
 
@@ -86,8 +90,8 @@ $color-gray-3: #b2b2b2; //rgba(0,0,0,.3)
 $color-gray-2: #cccccc; //rgba(0,0,0,.2)
 $color-gray-1: #e5e5e5; //rgba(0,0,0,.1)
 
-$color-primary: $color-gray-7;
-$color-secondary: $color-gray-6;
+$color-primary: $color-blue;
+$color-secondary: $color-red;
 
 
 

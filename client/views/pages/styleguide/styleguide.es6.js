@@ -1,11 +1,21 @@
 Template['styleguide'].helpers({
-  atoms: () => ["logo", "button", "headerSection", "instagram", "twitter", "codepen", "textarea"],
+  atoms: () => ["gradient", "imageoverlay", "logo", "logoRed", "logoBlue", "logoRedSmall","logoBlueSmall", "button", "headerSection", "instagram", "twitter", "codepen", "textarea"],
   escaped: (data = "hero") => Blaze.toHTML(Blaze.With({}, () => Template[data] )),
   colors: () => [
     {
       "name": "Blue",
       "var": "$color-primary",
-      "color": "#5A6BA0"
+      "color": "#5A6BA0",
+      "variation": [
+        {
+          "var": "tint",
+          "color": "#6A79A9"
+        },
+        {
+          "var": "shade",
+          "color": "#2F3549"
+        }
+      ]
     },
     {
       "name": "Red",
@@ -21,6 +31,22 @@ Template['styleguide'].helpers({
       "name": "primary-color",
       "var": "$color-blue-dark",
       "color": "#2F3549"
+    },
+    {
+      "name": "demo-red",
+      "color": "#f95657"
+    },
+    {
+      "name": "demo-blue",
+      "color": "#3b3f4b"
+    },
+    {
+      "name": "demo-lightblue",
+      "color": "#01b9ff"
+    },
+    {
+      "name": "demo-yellow",
+      "color": "#fddd18"
     },
     {
       "name": "primary-color",

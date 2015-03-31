@@ -4,48 +4,50 @@
 
 @import "../../../stylesheets/init";
 
-%border {
-  position: fixed;
-  background-color: currentColor;
-  z-index: 101;
-
-  &:after {
-    content: "";
+@include mq($from: tablet) {
+  %border {
     position: fixed;
     background-color: currentColor;
+    z-index: 101;
+
+    &:after {
+      content: "";
+      position: fixed;
+      background-color: currentColor;
+    }
   }
-}
 
-.border {
-  color: $color-gray-8;
-}
+  .border {
+    color: $color-blue //$color-gray-8;
+  }
 
-.border-vertical {
-  @extend %border;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: $border-size;
-
-  &:after {
-    right: 0;
+  .border-vertical {
+    @extend %border;
+    left: 0;
     top: 0;
     height: 100%;
     width: $border-size;
+
+    &:after {
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: $border-size;
+    }
   }
-}
 
-.border-horizontal {
-  @extend %border;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: $border-size;
-
-  &:after {
+  .border-horizontal {
+    @extend %border;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 100%;
     height: $border-size;
+
+    &:after {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: $border-size;
+    }
   }
 }

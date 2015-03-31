@@ -1,11 +1,12 @@
 <template name="grid">
-  <div class="grid">
-    {{> twitter}}
+  <section class="grid" data-midnight="alt-color">
     {{> instagram}}
     {{> instagram}}
-    {{> twitter}}
+    {{> instagram}}
+    {{> instagram}}
+    {{> instagram position="right"}}
     {{#each codepens}}
       {{> codepen src=src}}
     {{/each}}
-  </div>
+  </section>
 </template>

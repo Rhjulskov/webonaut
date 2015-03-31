@@ -5,18 +5,24 @@
 @import "../../../stylesheets/init";
 
 .ribbon {
-  .test & {
-    background-color: $color-yellow;
-  }
   @extend %gray4;
-  @include linear-gradient(black, white);
+  //@include linear-gradient(black, white);
+  background-color: $color-blue;
+  color: white;
   position: relative;
   z-index: 1;
   text-align: center;
 
+  h2 {
+    color: white;
+  }
+  
   .wrapper {
     height: 100%;
-    padding: 40px 200px;
+    padding: 40px 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
   }
 
   p {

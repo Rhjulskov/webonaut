@@ -7,4 +7,17 @@
 
 h1 {
   color: $color-secondary;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $color-secondary;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $alt-font-family;
+  font-style: italic;
 }

@@ -6,6 +6,9 @@
       {{#each colors}}
         <li>
           <div class="sg-color" style="background-color:{{color}}">
+          {{#each variation}}
+            <div class="sg-color__variation" style="background-color:{{color}}"></div>
+          {{/each}}
           </div>
           <div class="sg-color__text">
             <p>{{name}}</p>
@@ -13,6 +16,7 @@
             {{#if var}}
               {{#markdown}}
     {{var}}
+    {{#each variation}}- {{color}}{{/each}}
               {{/markdown}}
             {{/if}}
           </div>
