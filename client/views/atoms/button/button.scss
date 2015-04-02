@@ -4,18 +4,19 @@
 
 @import "../../../stylesheets/init";
 
-$border-color: $color-gray-8;
-$text-color: $color-gray-1;
+$border-color:  $color-red;//$color-gray-8;
+$text-color: white; //$color-gray-1;
 
 .button {
   margin: 10px 0;
   padding: 14px 30px;
-  border: 2px solid $color-gray-7;
-  color: $color-gray-7;
+  border: 2px solid $border-color;
+  color: $text-color;
   display: table;
+  @include transition(.3s all ease); 
 
   &:before {
-    @include transition(.4s all ease); 
+    @include transition(.3s all ease); 
     content: "";
     position: absolute;
     z-index: -1;
@@ -23,16 +24,15 @@ $text-color: $color-gray-1;
     left: -$border-size/2;
     width: 100%;
     height: 100%;
-    background: $color-gray-5;
+    background: shade( $border-color, 20);
 
   }
   &:hover {
-    background-color: $color-gray-6;
-    color: $text-color;
-
+    
     &:before {
       top: 0px;
       left: 0px;
+      background: $border-color;
     }
   }
 

@@ -8,10 +8,10 @@
   color: $color-primary;
   position: fixed;
   z-index: 100;
-  top: $border-size; 
+  top: 0;
   left: 0;
-  width: 100%;
-  height: $header-height;
+  width: $header-height + $border-size*3;
+  height: $header-height + $border-size*3;
   .header__logo {
     font-weight: 800;
     color: $color-red;
@@ -41,8 +41,10 @@
 }
 
 .midnightHeader {
-  height: 200px;
+  
   .logo {
+    padding: 0; 
+    margin: 0;
     height: $header-height;
     width: $header-height;
     margin: $border-size*1.2 0 0 $border-size*1.2;
