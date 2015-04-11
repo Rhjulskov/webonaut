@@ -1,8 +1,10 @@
 <template name="instagram">
   <!-- {{> instagram headline="this"}} -->
-  <div class="instagram grid-element {{#if position}}grid-element--right{{/if}}">
-    <div class="image" ></div>
-    <h3>Lorem ipsum dolor sit amet, consectetur adipis</h3>
-  </div>
+  {{#each instagramFeed}}
+    <div class="instagram grid-element {{#if position}}grid-element--right{{/if}}">
+      <div class="image" ></div>
+      <h3>{{headline}}</h3>
+    </div>
+  {{/each}}
 </template>
 

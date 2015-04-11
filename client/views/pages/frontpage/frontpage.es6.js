@@ -1,5 +1,5 @@
 Template['frontpage'].helpers({
-  hero_title: (x = "Me t eo r b o il er p la te") => x,
+  hero_title: (x = "Long bold headline") => x,
 
 });
 

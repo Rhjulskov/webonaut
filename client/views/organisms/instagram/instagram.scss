@@ -17,14 +17,15 @@
     width: 50%; 
     @include transition(.2s all ease-in-out);   
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0);  
-    background-image: url("http://lorempixel.com/300/400/technics/");
+    background-image: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/10723959_958466214177352_395250663_n.jpg");
+    background-size: cover;
     background-color: $color-blue;
     background-blend-mode: luminosity; // lighten, luminosity
 
   }
   h3 {
     color: $color-red;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1.2em;
     position: absolute;
     width: 40%;
