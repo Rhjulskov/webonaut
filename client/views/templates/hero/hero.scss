@@ -212,7 +212,9 @@
       .planet-5 {
         @extend %planet;
         @extend %gray3;
-        @include linear-gradient(45deg, #C7C9DD , #A16D94);  
+        //@include linear-gradient(45deg, #C7C9DD , #A16D94);  
+        background-color: #ffd200;
+        border: 4px solid rgba(255,255,0, .6);        
         left: 65%;
         top: 25%;
         width: 90px;
@@ -232,7 +234,9 @@
       .planet-7 {
         @extend %planet;
         @extend %gray3;
-        @include linear-gradient(45deg, $color-blue , #A3A8C9);  
+        //@include linear-gradient(45deg, $color-blue , #A3A8C9);  
+        background: #d1413a;
+        border: 4px solid #e78553;
         left: 40%;
         top: 15%;
         width: 40px;

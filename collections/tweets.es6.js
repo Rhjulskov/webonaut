@@ -3,13 +3,13 @@ tweets = new Mongo.Collection('tweets');
 
 tweets.attachSchema(
   new SimpleSchema({
-    name: {
+    text: {
       type: String
     },
-    username: {
+    id_str: {
       type: String
     },
-    message: {
+    published_date: {
       type: String
     }
   })

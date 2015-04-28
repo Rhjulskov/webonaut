@@ -7,7 +7,7 @@
 .instagram {
   @include clearfix;
   position: relative;
-  z-index: 1;
+  
   .image {
     position: relative;
     height: 400px;
@@ -23,9 +23,22 @@
     background-blend-mode: luminosity; // lighten, luminosity
 
   }
+  .img-wrapper {
+    background: $color-blue;
+    width: 50%;
+  }
+  
+  img {
+    width: 100%;
+    opacity: 0.5;
+    @include filter(grayscale(100%));
+    @include transition(.2s all ease-in-out);   
+    display: block;
+  }
+
   h3 {
     color: $color-red;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.2em;
     position: absolute;
     width: 40%;
@@ -36,14 +49,18 @@
   }
 
   &:hover {
-    .image {
+    z-index: 1;
+    img {
       // background-color: $color-red;
       @include transform(scale(1.1));
-      box-shadow: -20px 20px 0px 0px $color-blue;
+      @include filter(grayscale(0%));
+      opacity: 1;
+      box-shadow: -20px 20px 0px 0px rgba($color-blue , .5);
     }
+
     h3 {
       left: 75%;
-      color: $color-red;
+      color: $color-blue;
     }
   }
 }
@@ -69,12 +86,15 @@
   } 
 
 
-  &--right {
+  &--right,
+  //hack:!
+  &:nth-child(5n) {
     @extend %gray7; 
   
 
-    img {
-      float: right;
+    .img-wrapper {
+      background-color: $color-red;
+      margin-left: 50%;
     }
 
     h3 {

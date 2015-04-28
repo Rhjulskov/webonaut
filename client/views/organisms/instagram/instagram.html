@@ -2,7 +2,11 @@
   <!-- {{> instagram headline="this"}} -->
   {{#each instagramFeed}}
     <div class="instagram grid-element {{#if position}}grid-element--right{{/if}}">
-      <div class="image" ></div>
+      <!-- <div class="image" ></div> -->
+      <div class="img-wrapper">
+        <!-- <img src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/10723959_958466214177352_395250663_n.jpg" /> -->
+        <img src="/working.jpg" />
+      </div>
       <h3>{{headline}}</h3>
     </div>
   {{/each}}
