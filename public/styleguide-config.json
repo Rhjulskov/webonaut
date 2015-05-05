@@ -86,7 +86,6 @@
   },
   "Organisms": {
     "templates": [
-      {"name": "codepen"},
       {"name": "headerSection"},
       {"name": "instagram"},
       {"name": "textarea"},

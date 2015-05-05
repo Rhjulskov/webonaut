@@ -1,8 +1,12 @@
 <template name="frontpage">
   {{> border}}
   {{> hero }}
-  {{> ribbon}}
+  {{#markdown}}
+    <div><p>lore ms</p></div>
+  {{/markdown}}
+  {{> ribbon header="About me" content="hello world" }}
   {{> grid}}
   {{> headerSection}}
   {{> textarea headline=hero_title}}
+  {{> ribbon class="ribbon--secondary" header="Contact me!" content="Are you interested?" btn="Contact me" }}
 </template>

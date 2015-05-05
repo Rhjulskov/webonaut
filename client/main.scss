@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  color: $color-gray-8;
+  color: $color-gray-6;
   font-family: $base-font-family;
   line-height: $base-line-height;
   @include mq($from: tablet) {

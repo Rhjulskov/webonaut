@@ -5,5 +5,21 @@
 @import "../../../stylesheets/init";
 
 .twitter {
+  color: black;
+  padding: 10px;
+  width: 25%;
 
+  &:hover {
+    background-color: rgba($color-blue , .5);
+    color: white;
+    padding: 10px;
+  }
+
+  @include mq($until: tablet) {
+    @include span-columns(6);  
+  } 
+
+  @include mq($from: tablet) {
+    @include span-columns(3);
+  } 
 }

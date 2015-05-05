@@ -27,12 +27,6 @@ Template['hero'].rendered = function () {
       polylion_duration = 1.25,
       hero_header = $('.hero-header, .hero-subheader');
 
-  // Force the transforms to be applied to actual transform attribute
-  // rather than the CSS style. This is an undocumented property added
-  // somewhat recently by GreenSock. As of 1.15.0, transforms are 
-  // automatically GPU-accelerated. It won’t matter in this example, 
-  // though, because browsers won’t GPU-accelerate SVG (as of 2/22/15).
-  // Thanks Jack Doyle@GreenSock for the tip!
   CSSPlugin.useSVGTransformAttr = true;
 
   var polylion_staggerFrom = {

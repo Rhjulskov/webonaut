@@ -13,8 +13,13 @@
   z-index: 1;
   text-align: center;
 
+  &.ribbon--secondary {
+    background-color: white;
+    color: $color-gray-7;
+  }
+
   h2 {
-    color: white;
+    color: inherit;
   }
   
   .wrapper {

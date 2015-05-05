@@ -46,6 +46,8 @@
     left: 50%;
     @include transform(translateX(-50%) translateY(-50%));
     @include transition(.2s all ease-in-out);
+    border: 3px solid $color-red;
+    padding: 10px;
   }
 
   &:hover {
@@ -61,11 +63,13 @@
     h3 {
       left: 75%;
       color: $color-blue;
+      border-color: $color-blue;
+      padding: 16px;
     }
   }
 }
 
-.grid-element {
+.instagram {
   @include clearfix;
 
   @include mq($until: tablet) {

@@ -41,7 +41,6 @@
     </div>
   </div>
   <div class="sg-wrapper">
-
     {{#each atoms}}
       <div class="sg-element">
         {{> sgheader header=this.name}}
@@ -54,7 +53,7 @@
           <div class="sg-element__code expander-content">
           {{#markdown}}
 ```html
-{{ escaped this}}
+  {{ escaped this.name}}
 ```
 {{/markdown}}
           </div>
@@ -109,13 +108,13 @@
 
 
   {{#markdown}}
-  <!-- use h1's for everything -->
-  <h1>h1 styling</h1>
-  <h2>h2 styling</h2>
-  <h3>h3 styling</h3>
-  <h4>h4 styling</h4>
-  <h5>h5 styling</h5>
-  <h6>h6 styling</h6>
+    <!-- use h1's for everything -->
+    <h1>h1 styling</h1>
+    <h2>h2 styling</h2>
+    <h3>h3 styling</h3>
+    <h4>h4 styling</h4>
+    <h5>h5 styling</h5>
+    <h6>h6 styling</h6>
   {{/markdown}}
 
 

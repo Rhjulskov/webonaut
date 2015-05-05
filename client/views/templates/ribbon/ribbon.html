@@ -1,9 +1,9 @@
 <template name="ribbon">
-  <div class="ribbon">
+  <div class="ribbon {{class}}" data-midnight="alt-color-small">
     <div class="wrapper">
-      <h1>Overskrift</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate voluptates sequi voluptas!</p>
-      {{> button}}
+      <h1>{{header}}</h1>
+      <p>{{content}}</p>
+      {{> button href="#" text=btn}}
     </div>
   </div>
 </template>
