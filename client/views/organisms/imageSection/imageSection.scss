@@ -5,5 +5,78 @@
 @import "../../../stylesheets/init";
 
 .imageSection {
+  @include clearfix;
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  background-color: rgba(0,0,0, .1);
 
+  @include mq($until: tablet){
+    padding-top: 20px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    border: 1px solid black;
+
+    @include mq($until: tablet){
+      top: 2%;
+      right: 4%;
+      height: 96%;
+      width: 98%;
+    }
+    
+    @include mq($from: tablet){
+      top: 8%;
+      right: 4%;
+      height: 84%;
+      width: 97%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include mq($until: tablet){
+      @include span-columns(12);
+      padding: 30px 10px;
+    }
+
+    @include mq($from: tablet){
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      @include span-columns(6);
+    }
+  }
+
+  &__wrapper {
+    @include mq($from: tablet){
+      padding: 0 2%;
+      max-width: 400px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      @include transform( translateY(-50%));
+    }
+  }
+
+  &__image {
+    @include mq($until: tablet){
+      @include span-columns(12);
+    }
+
+    @include mq($from: tablet){
+      @include span-columns(6);
+      float: right;
+    }
+
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
 }
