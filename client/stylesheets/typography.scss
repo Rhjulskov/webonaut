@@ -17,16 +17,16 @@ h2 {
   font-weight: 800;
   text-transform: uppercase;
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    left: 0;
-    width: 30px;
-    height: 3px;
-    background: $color-red;
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: -13px;
+  //   left: 0;
+  //   width: 30px;
+  //   height: 3px;
+  //   background: $color-red;
 
-  }
+  // }
 }
 
 h3 {

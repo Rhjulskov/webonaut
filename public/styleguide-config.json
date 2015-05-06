@@ -82,6 +82,7 @@
   },
   "Molecules": {
     "templates": [
+      {"name": "imageSection"}
     ]
   },
   "Organisms": {

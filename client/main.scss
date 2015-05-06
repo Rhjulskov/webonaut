@@ -18,6 +18,9 @@ body {
   color: $color-gray-6;
   font-family: $base-font-family;
   line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
   @include mq($from: tablet) {
     padding: $border-size;
   }

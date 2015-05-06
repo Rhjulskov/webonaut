@@ -33,7 +33,6 @@
   .hero-header {
     position: relative;
     top: 0;
-    font-size: 70px;
     text-align: center;    
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -42,17 +41,34 @@
     margin: 0 auto;
     padding: 10px;
     line-height: 1em;
+
+    @include mq($until: tablet){
+      font-size: 8vw;
+    }
+
+    @include mq($from: tablet){
+      font-size: 60px;
+    }
   }
 
   .hero-subheader {
     position: relative;
     top: 0;
-    font-size: 24px;
+    line-height: inherit;
     text-align: center;
     padding-top: 20px;
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     color: white;
+
+    @include mq($until: tablet){
+      font-size: 16px;
+    }
+
+    @include mq($from: tablet){
+      font-size: 24px;
+    }
   }
 
   .planets {

@@ -8,7 +8,7 @@ Meteor.startup(function(){
     access_token_secret: 'BucLqGNlXZGMdpH4YyoRUprkFkiYUkTfNVuCeh6e7LDgF'
   })
   fetchTweets = function(){
-    T.get('search/tweets', { q: 'from:RasmusHjulskov', count: 10 }, Meteor.bindEnvironment(function(err, data, response) {
+    T.get('search/tweets', { q: 'from:RasmusHjulskov #webonaut', count: 10 }, Meteor.bindEnvironment(function(err, data, response) {
       data.statuses.forEach(function(entry) {
         Meteor.call('addTweet', entry);
         // console.log(entry);

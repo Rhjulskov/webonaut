@@ -5,9 +5,9 @@
 @import "../../../stylesheets/init";
 
 .logo {
-  width: 320px;
-  height: 320px;
   position: relative;
+  max-width: 320px;
+  width: 40%;
   display: block;
   margin-bottom: 24px;
   margin-left: auto;

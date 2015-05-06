@@ -15,6 +15,14 @@ $text-color: white; //$color-gray-1;
   display: table;
   @include transition(.3s all ease); 
 
+  &.sec {
+    border-color: $color-blue;
+
+    &:before {
+      background: shade( $color-blue, 20);
+    }
+  }
+
   &:before {
     @include transition(.3s all ease); 
     content: "";
@@ -27,6 +35,7 @@ $text-color: white; //$color-gray-1;
     background: shade( $border-color, 20);
 
   }
+
   &:hover {
     
     &:before {
@@ -34,6 +43,21 @@ $text-color: white; //$color-gray-1;
       left: 0px;
       background: $border-color;
     }
+  }
+
+  &.sec {
+    border-color: $color-blue;
+
+    &:before {
+      background: shade( $color-blue, 20);
+    }
+
+    &:hover {
+    
+        &:before {
+          background: $color-blue;
+        }
+      }
   }
 
 }
