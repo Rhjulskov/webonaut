@@ -12,6 +12,7 @@
   left: 0;
   width: $header-height + $border-size*3;
   height: $header-height + $border-size*3;
+
   .header__logo {
     font-weight: 800;
     color: $color-red;
@@ -41,7 +42,6 @@
 }
 
 .midnightHeader {
-  
   .logo {
     padding: 0; 
     margin: 0;
