@@ -21,6 +21,7 @@
 .hero {
   @extend %gray2;
   background: url("/top.jpg");
+  background: url("/space.jpg");
   background-size: cover;
   color: $color-gray-1;
   position: relative;
