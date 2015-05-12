@@ -11,7 +11,6 @@ Meteor.startup(function(){
     T.get('search/tweets', { q: 'from:RasmusHjulskov #webonaut', count: 10 }, Meteor.bindEnvironment(function(err, data, response) {
       data.statuses.forEach(function(entry) {
         Meteor.call('addTweet', entry);
-        // console.log(entry);
       });
     }));
   };

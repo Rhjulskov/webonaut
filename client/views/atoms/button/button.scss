@@ -13,7 +13,7 @@ $text-color: white; //$color-gray-1;
   border: 2px solid $border-color;
   color: $text-color;
   display: table;
-  @include transition(.3s all ease); 
+  @include transition($a-time all $a-easing) ;
 
   &.sec {
     border-color: $color-blue;
@@ -24,7 +24,7 @@ $text-color: white; //$color-gray-1;
   }
 
   &:before {
-    @include transition(.3s all ease); 
+    @include transition($a-time all $a-easing); 
     content: "";
     position: absolute;
     z-index: -1;

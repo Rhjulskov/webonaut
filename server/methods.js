@@ -5,9 +5,10 @@ Meteor.methods({
       currentTweet = currentTweet.replace('#webonaut', '');
       tweets.insert({
         text: currentTweet,
+        hashtags: tweet.entities.hashtags,
         id_str: tweet.id_str,
         published_date: tweet.created_at,
-        link_href: "http://twitter.com" // NOT WORKING
+        link_href: "https://twitter.com/RasmusHjulskov/status/"+tweet.id_str        
       });
     }
   }

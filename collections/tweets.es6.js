@@ -6,10 +6,17 @@ tweets.attachSchema(
     text: {
       type: String
     },
+    hashtag: {
+      type: Object,
+      optional: true
+    },
     id_str: {
       type: String
     },
     published_date: {
+      type: String
+    },
+    link_href: {
       type: String
     }
   })

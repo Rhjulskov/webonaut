@@ -23,10 +23,10 @@ $mq-show-breakpoints: phone, phablet, tablet, desktop, widescreen;
 
 // Transitions ---------------------------------------------------- //
 
-$default-transition-property: all;
-$default-transition-duration: 0.2s;
-$default-transition-function: ease-in-out;
-$default-transition-delay:    false;
+$a-property: all;
+$a-time: 0.2s;
+$a-easing: ease-in-out;
+$a-delay:    false;
 
 // Typography ----------------------------------------------------- //
 

@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 50%; 
-    @include transition(.2s all ease-in-out);   
+    @include transition($a-time all $a-easing);   
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0);  
     background-image: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/10723959_958466214177352_395250663_n.jpg");
     background-size: cover;
@@ -32,7 +32,7 @@
     width: 100%;
     opacity: 0.5;
     @include filter(grayscale(100%));
-    @include transition(.2s all ease-in-out);   
+    @include transition($a-time all $a-easing);   
     display: block;
   }
 
@@ -45,7 +45,7 @@
     top:45%;
     left: 50%;
     @include transform(translateX(-50%) translateY(-50%));
-    @include transition(.2s all ease-in-out);
+    @include transition($a-time all $a-easing);
     border: 3px solid $color-red;
     padding: 10px;
   }
@@ -64,7 +64,6 @@
       left: 75%;
       color: $color-blue;
       border-color: $color-blue;
-      padding: 16px;
     }
   }
 }
