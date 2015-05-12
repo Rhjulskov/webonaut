@@ -1,6 +1,5 @@
 Meteor.methods({
   addTweet: function(tweet){
-    console.log(tweet);
     if(tweets.find({id_str: tweet.id_str}).count() == 0 ){
       var currentTweet = tweet.text;
       currentTweet = currentTweet.replace('#webonaut', '');

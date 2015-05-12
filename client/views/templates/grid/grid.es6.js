@@ -2,6 +2,9 @@ Template['grid'].helpers({
   codepens: () => [
     {
       "src": "//codepen.io/Rhjulskov/embed/ravzGw/?height=400&theme-id=13167"
+    }, 
+    {
+      "src": "//codepen.io/bugarin/embed/BNjZZP/?height=400&theme-id=13100&default-tab=result"
     }
   ],
   tweets: () => tweets.find()
@@ -9,3 +12,5 @@ Template['grid'].helpers({
 
 Template['grid'].events({
 });
+
+
