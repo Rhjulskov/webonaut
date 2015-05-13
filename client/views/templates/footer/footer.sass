@@ -7,45 +7,95 @@
 .footer 
   margin-top: 100px
 
+  +mq($until: tablet)
+    margin-bottom: 6px
+
   ul 
-    +clearfix
+    +display(flex)
+    +flex-wrap(wrap)
 
-    li 
+    li
+      +display(flex) 
+      +align-items(center)
       position: relative
-      +span-columns(4)
-      height: 80px
-      padding: 4px
+      padding: 6px
 
-      // &:nth-child(1)
-        
+      +mq($until: tablet)
+        width: 100%
+        padding: 14px 22px
+
+      +mq($from: tablet)
+        width: 33%
+
+      
+        // &:nth-child(1)        
+        //   display: none
+
+      &:nth-child(1)
+        +align-self(flex-start)
+
       &:nth-child(2)
-        background: $color-blue
+        background: rgba($color-blue,.8)
         color: white
-
-        &:after
-          content: "2015"
-          border: 4px solid $color-blue
-          color: $color-blue
-          font-size: 22px
-          position: absolute
-          top: 0
-          left: 0
-          +transform(rotate(90deg))
-          transform-origin: left top 0
-          font-weight: 900
-          font-family: jaapokki-subtract
+        
+        +mq($from: tablet)
+          &:after
+            content: "2015"
+            border-bottom: 4px solid rgba($color-blue,.8)
+            border-right: 4px solid rgba($color-blue,.8)
+            border-left: 4px solid rgba($color-blue,.8)
+            color: rgba($color-blue,.8)
+            font-size: 16px
+            position: absolute
+            top: 100%
+            right: 100%
+            +transform(rotate(90deg))
+            transform-origin: right top 0
+            font-weight: 900
+            line-height: 16px
+            padding: 4px 4px 0 4px
+            font-family: jaapokki-subtract
 
       &:nth-child(3) 
-        border: 4px solid $color-blue
+        border: 4px solid rgba($color-blue,.8)
         color: $color-blue
       
+      p 
+        color: inherit 
+        text-align: center;
+        width: 100%
+        font-weight: bold
+
+      a 
+        color: $color-red
 
       .footer__header 
-        bottom: 0
         color: $color-red
         font-size: 10vw
         text-transform: uppercase
-        line-height: 0.65em
-        letter-spacing: 2px
-        text-align: right
+        line-height: 0.5em
+        letter-spacing: -3px
         font-family: jaapokki-subtract
+
+        +mq($until: tablet)
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          text-align: center
+
+        +mq($from: tablet)
+          text-align: right
+      
+        div
+          +mq($until: tablet)
+            display: inline-block
+            font-size: 14vw
+
+
+          &:nth-child(2)
+            line-height: 0.2em
+            margin-top: 0.3em
+
+            +mq($until: tablet)
+              margin-left: -0.2em
