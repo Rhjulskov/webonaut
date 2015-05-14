@@ -7,6 +7,17 @@
 .instagram 
   +clearfix
   position: relative
+  +transition(3s all $a-easing)
+  perspective: 100%;
+  
+
+  &.visible 
+    .img-wrapper
+      +transform(rotateX(0deg))  
+
+    h3
+      left: 50%
+      opacity: 1
   
   .image 
     position: relative
@@ -22,9 +33,15 @@
     background-color: $color-blue
     background-blend-mode: luminosity
 
+
   .img-wrapper
     background: $color-blue
     width: 50%
+    height: 100%
+    +transition($a-time all $a-easing)
+    +transform(rotateX(-90deg))
+    +transform-origin(center top)
+    +transform-style(preserve-3d)  
   
   img
     width: 100%
@@ -32,6 +49,9 @@
     +filter(grayscale(100%))
     +transition($a-time all $a-easing)
     display: block
+      // +transition(5s all $a-easing)
+      // +transform(rotateX(-90deg))
+      // +transform-origin(center top)
 
   h3
     color: $color-red
@@ -40,7 +60,8 @@
     position: absolute
     width: 40%
     top:45%
-    left: 50%
+    left: 20%
+    opacity: 0
     +transform(translateX(-50%) translateY(-50%))
     +transition($a-time all $a-easing)
     border: 3px solid $color-red

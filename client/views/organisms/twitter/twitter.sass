@@ -8,10 +8,15 @@
   position: relative
   color: black
   padding: 3%
-  +flex-grow(1)
-  
-  +transition($a-time all $a-easing)
   color: white
+  +flex-grow(1)
+  +transition($a-time all $a-easing)
+  +transform(translate3d(0,100%,0))
+  opacity: 0
+
+  &.visible
+    +transform(translate3d(0,0,0))
+    opacity: 1  
 
   @include mq($until: tablet) 
     width: 50% 
