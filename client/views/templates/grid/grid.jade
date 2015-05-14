@@ -1,18 +1,24 @@
 template(name="grid")
-  section.grid(data-midnight="alt-color")
   h2 My life
+  section.grid(data-midnight="alt-color")
+    each tweets
+      +twitter
+      +instagram
 
-  each tweets
-    +twitter
-
-  +instagram
-  +instagram
-  +instagram
-  +instagram
-  +instagram
-  +instagram position="right"
-  +instagram
-  
-  each codepens
-    +codepen src=src
+    //- +twitter
+    //- +instagram
+    //- +twitter
+    //- +instagram
+    //- +instagram
+    //- +twitter
+    //- +instagram
+    //- +instagram position="right"
+    //- +twitter
+    //- +twitter
+    //- +twitter
+    //- +instagram position="right"
+    //- +instagram
     
+    //- each codepens
+    //-   +codepen src=src
+    //-   

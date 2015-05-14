@@ -7,11 +7,17 @@
 .tweet 
   position: relative
   color: black
-  padding: 10px
-  margin: 10px
-  width: 25%
+  padding: 3%
+  +flex-grow(1)
+  
   +transition($a-time all $a-easing)
   color: white
+
+  @include mq($until: tablet) 
+    width: 50% 
+
+  @include mq($from: tablet) 
+    width: 25%
 
   a
     text-decoration: none
@@ -21,8 +27,8 @@
     +transition($a-time all $a-easing)
     content: "“"
     position: absolute
-    top: -10px
-    left: 10px
+    top: 10px
+    left: 20px
     text-transform: lowercase
     color: rgba($color-red, .2)
     font-size: 170px
@@ -50,7 +56,7 @@
   &:hover 
     
     &:before 
-      top: -20px
+      top: -10px
       left: 0px
       color: rgba($color-red, .5)
 
@@ -63,8 +69,4 @@
 
     
 
-  @include mq($until: tablet) 
-    @include span-columns(6) 
-
-  @include mq($from: tablet) 
-    @include span-columns(3)
+ 
