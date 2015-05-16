@@ -10,6 +10,7 @@
   +transition(3s all $a-easing)
   perspective: 1000px
   +transform-style(preserve-3d) 
+  
 
   &.visible 
     .img-wrapper
@@ -38,8 +39,9 @@
     background: $color-blue
     width: 50%
     height: 100%
+    +backface-visibility(hidden)
     +transition($a-time all $a-easing)
-    +transform(rotateX(-90deg))
+    +transform(rotateX(-120deg))
     +transform-origin(center top)
     +transform-style(preserve-3d)  
   
