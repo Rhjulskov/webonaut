@@ -8,8 +8,8 @@
   +clearfix
   position: relative
   +transition(3s all $a-easing)
-  perspective: 100%;
-  
+  perspective: 1000px
+  +transform-style(preserve-3d) 
 
   &.visible 
     .img-wrapper
@@ -55,7 +55,6 @@
 
   h3
     color: $color-red
-    font-size: 28px
     line-height: 1.2em
     position: absolute
     width: 40%
@@ -64,8 +63,45 @@
     opacity: 0
     +transform(translateX(-50%) translateY(-50%))
     +transition($a-time all $a-easing)
-    border: 3px solid $color-red
+    
     padding: 10px
+
+    +mq($until: tablet)
+      font-size: 16px
+      border: 2px solid $color-red
+
+    +mq($from: tablet, $until: desktop)
+      font-size: 22px
+      border: 3px solid $color-red
+
+    +mq($from: desktop)
+      font-size: 28px
+
+.instagram
+  +mq($until: tablet)
+    +span-columns(12)  
+    &:nth-child(2n)
+      .image 
+        float: right
+  
+  +mq($from: tablet)
+    +span-columns(6)
+
+    &:nth-child(3n)
+      margin: 0 25%
+
+  // &--right,
+  // //hack:!
+  // &:nth-child(5n)
+  //   @extend %gray7
+  
+  //   .img-wrapper 
+  //     background-color: $color-red
+  //     margin-left: 50%
+    
+  //   h3 
+  //     left: 25%
+  //     top: 50%
 
   &:hover
     z-index: 1
@@ -80,35 +116,15 @@
       left: 75%
       color: $color-blue
       border-color: $color-blue
-
-.instagram
-  +clearfix
+  
   +mq($until: tablet)
-    +span-columns(12)  
-    &:nth-child(2n)
-      .image 
-        float: right
-  
-  +mq($from: tablet)
-    +span-columns(6)
-
-    &:nth-child(3n)
-      margin: 0 25%
-
-  &--right,
-  //hack:!
-  &:nth-child(5n)
-    @extend %gray7
-  
-    .img-wrapper 
-      background-color: $color-red
-      margin-left: 50%
-    
-    h3 
-      left: 25%
-      top: 50%
-  
-  &:nth-child(odd)
-    .image 
+    &:nth-child(even)
       .img-wrapper
         margin-left: 50%
+
+      &:hover
+
+        h3
+          left: 25%
+
+

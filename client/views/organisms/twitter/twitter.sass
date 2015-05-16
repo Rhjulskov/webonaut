@@ -7,22 +7,23 @@
 .tweet 
   position: relative
   color: black
-  padding: 3%
   color: white
   +flex-grow(1)
   +transition($a-time all $a-easing)
-  +transform(translate3d(0,100%,0))
+  +transform(translate3d(0,10%,0))
   opacity: 0
 
   &.visible
     +transform(translate3d(0,0,0))
     opacity: 1  
 
-  @include mq($until: tablet) 
-    width: 50% 
+  +mq($until: tablet) 
+    width: 50%
+    padding: 12%
 
-  @include mq($from: tablet) 
+  +mq($from: tablet) 
     width: 25%
+    padding: 3%
 
   a
     text-decoration: none
@@ -44,6 +45,8 @@
     top: 100%
     left: 0
     right: 0
+    font-size: 14px
+    font-weight: normal
     +transition($a-time all $a-easing)
     opacity: 0
     margin-top: -30px
