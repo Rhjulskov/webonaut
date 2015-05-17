@@ -12,7 +12,7 @@
   
 
     &:nth-child(1) {
-      @include linear-gradient(45deg, #C7C9DD, $color-blue);  
+      @include linear-gradient(45deg, #C7C9DD, $blue);  
     }
 
     &:nth-child(2) {
@@ -20,7 +20,7 @@
     }
 
     &:nth-child(3) {
-      @include linear-gradient(45deg, #C7C9DD , $color-blue);  
+      @include linear-gradient(45deg, #C7C9DD , $blue);  
     }
 
     &:nth-child(4) {
@@ -28,15 +28,15 @@
     }
 
     &:nth-child(5) {
-      @include linear-gradient(45deg, #A16D94 , $color-red);  
+      @include linear-gradient(45deg, #A16D94 , $red);  
     }
 
     &:nth-child(6) {
-      @include linear-gradient(45deg, $color-blue , #A3A8C9);  
+      @include linear-gradient(45deg, $blue , #A3A8C9);  
     }
 
     &:nth-child(7) {
-      @include linear-gradient(45deg, #A16D94 , $color-blue);  
+      @include linear-gradient(45deg, #A16D94 , $blue);  
     }
 
   }

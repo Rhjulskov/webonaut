@@ -4,7 +4,7 @@
 
 @import ../../../stylesheets/init
 
-$border-color:  $color-red
+$border-color:  $red
 $text-color: white
 
 .button 
@@ -16,10 +16,10 @@ $text-color: white
   +transition($a-time all $a-easing)
 
   &.sec 
-    border-color: $color-blue
+    border-color: $blue
 
     &:before 
-      background: shade( $color-blue, 20)
+      background: shade( $blue, 20)
 
   &:before 
     +transition($a-time all $a-easing)
@@ -40,12 +40,12 @@ $text-color: white
       background: $border-color
     
   &.sec 
-    border-color: $color-blue
+    border-color: $blue
 
     &:before 
-      background: shade( $color-blue, 20)
+      background: shade( $blue, 20)
 
     &:hover 
     
       &:before 
-        background: $color-blue
+        background: $blue

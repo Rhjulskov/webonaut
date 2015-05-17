@@ -52,83 +52,82 @@ $border-size: 20px;
 
 
 
-$color-blue: #5A6BA0;
-$color-blue-light: tint($color-blue, 10%);
-$color-blue-dark: shade($color-blue, 10%);
+$blue: #5A6BA0;
+$blue-light: tint($blue, 10%);
+$blue-dark: #2F3549; //shade($blue, 10%);
 
-$color-red: #E64675;
-$color-red-dark: shade($color-red, 10%);
+$red: #E64675;
+$red-dark: shade($red, 10%);
 
 
 // demo
-$color-yellow: #FFF05E;
-$color-blue-dark: #2F3549;
+$yellow: #FFF05E;
 
 
 // Prototype --------------------------------------------------------- //
 
-$color-gray-10: #000000; //rgba(0,0,0,1)
-$color-gray-9: #191919; //rgba(0,0,0,.9)
-$color-gray-8: #333333; //rgba(0,0,0,.8)
-$color-gray-7: #4c4c4c; //rgba(0,0,0,.7)
-$color-gray-6: #666666; //rgba(0,0,0,.6)
-$color-gray-5: #7f7f7f; //rgba(0,0,0,.5)
-$color-gray-4: #999999; //rgba(0,0,0,.4)
-$color-gray-3: #b2b2b2; //rgba(0,0,0,.3)
-$color-gray-2: #cccccc; //rgba(0,0,0,.2)
-$color-gray-1: #e5e5e5; //rgba(0,0,0,.1)
+$gray-10: #000000; //rgba(0,0,0,1)
+$gray-9: #191919; //rgba(0,0,0,.9)
+$gray-8: #333333; //rgba(0,0,0,.8)
+$gray-7: #4c4c4c; //rgba(0,0,0,.7)
+$gray-6: #666666; //rgba(0,0,0,.6)
+$gray-5: #7f7f7f; //rgba(0,0,0,.5)
+$gray-4: #999999; //rgba(0,0,0,.4)
+$gray-3: #b2b2b2; //rgba(0,0,0,.3)
+$gray-2: #cccccc; //rgba(0,0,0,.2)
+$gray-1: #e5e5e5; //rgba(0,0,0,.1)
 
-$color-primary: $color-blue;
-$color-secondary: $color-red;
+$color-primary: $blue;
+$color-secondary: $red;
 
 
 
 %gray10 {
-  background-color: $color-gray-10;
+  background-color: $gray-10;
   color: white;
 }
 
 %gray9 {
-  background-color: $color-gray-9;
+  background-color: $gray-9;
   color: white;
 }
 
 
 %gray8 {
-  background-color: $color-gray-8;
+  background-color: $gray-8;
   color: white;
 }
 
 
 %gray7 {
-  background-color: $color-gray-7;
+  background-color: $gray-7;
   color: white;
 }
 
 %gray6 {
-  background-color: $color-gray-6;
+  background-color: $gray-6;
   color: white;
 }
 
 
 %gray5 {
-  background-color: $color-gray-5;
+  background-color: $gray-5;
 }
 
 
 %gray4 {
-  background-color: $color-gray-4;
+  background-color: $gray-4;
 }
 
 
 %gray3 {
-  background-color: $color-gray-3;
+  background-color: $gray-3;
 }
 
 %gray2 {
-  background-color: $color-gray-2;
+  background-color: $gray-2;
 }
 
 %gray1 {
-  background-color: $color-gray-1;
+  background-color: $gray-1;
 }

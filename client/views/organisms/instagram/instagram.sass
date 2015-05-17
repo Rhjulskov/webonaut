@@ -31,12 +31,12 @@
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0)  
     background-image: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/10723959_958466214177352_395250663_n.jpg")
     background-size: cover
-    background-color: $color-blue
+    background-color: $blue
     background-blend-mode: luminosity
 
 
   .img-wrapper
-    background: $color-blue
+    background: $blue
     width: 50%
     height: 100%
     +backface-visibility(hidden)
@@ -56,7 +56,7 @@
       // +transform-origin(center top)
 
   h3
-    color: $color-red
+    color: $red
     line-height: 1.2em
     position: absolute
     width: 40%
@@ -70,11 +70,11 @@
 
     +mq($until: tablet)
       font-size: 16px
-      border: 2px solid $color-red
+      border: 2px solid $red
 
     +mq($from: tablet, $until: desktop)
       font-size: 22px
-      border: 3px solid $color-red
+      border: 3px solid $red
 
     +mq($from: desktop)
       font-size: 28px
@@ -112,12 +112,12 @@
       +transform(scale(1.1))
       +filter(grayscale(0%))
       opacity: 1
-      box-shadow: -20px 20px 0px 0px rgba($color-blue , .5)
+      box-shadow: -20px 20px 0px 0px rgba($blue , .5)
 
     h3
       left: 75%
-      color: $color-blue
-      border-color: $color-blue
+      color: $blue
+      border-color: $blue
   
   +mq($until: tablet)
     &:nth-child(even)

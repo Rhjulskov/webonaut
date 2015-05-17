@@ -30,7 +30,7 @@
           },
           {
             "name": "primary-color",
-            "var": "$color-blue-dark",
+            "var": "$blue-dark",
             "color": "#2F3549"
           },
           {

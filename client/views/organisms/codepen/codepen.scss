@@ -11,7 +11,7 @@
     position: relative;
     @include span-columns(6); 
     padding-top: 40%;
-    border: 1px solid $color-gray-5  ;
+    border: 1px solid $gray-5  ;
 
     iframe {
       position: absolute;
