@@ -82,7 +82,7 @@
   },
   "Molecules": {
     "templates": [
-      {"name": "imageSection"}
+      {"name": "quote"}
     ]
   },
   "Organisms": {
@@ -95,6 +95,7 @@
   },
   "Templates": {
     "templates": [
+      {"name": "imageSection"},
       {"name": "grid"},
       {"name": "footer"},
       {"name": "ribbon"}

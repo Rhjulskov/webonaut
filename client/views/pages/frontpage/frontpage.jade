@@ -1,9 +1,28 @@
 template(name="frontpage")
   +border
   +hero
-  +imageSection 
-  +ribbon header="About me" content="hello world" 
+  +imageSection(
+    header="Overskrift"
+    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis deleniti iusto quia, ut nobis, incidunt molestiae nemo enim optio voluptas esse natus culpa repellendus doloribus placeat rem ex molestias." 
+    btn_href="#" 
+    btn_text="heh"
+    image_src="/webonaut_profile_blue.png"
+    image_alt="profile picture"
+  )
+  +ribbon(
+    header="About me" 
+    content="hello world"
+    btn_href="#"
+    btn_text="o1o1"
+  )
   +grid
   +headerSection
-  +textarea headline=hero_title
-  +ribbon class="ribbon--secondary" header="Contact me!" content="Are you interested?" btn="Contact me"
+  +textarea(
+    headline=hero_title
+  )
+  +ribbon(
+    class="ribbon--secondary" 
+    header="Contact me!" 
+    content="Are you interested?" 
+    btn_text="Contact me"
+  )
