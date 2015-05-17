@@ -11,5 +11,16 @@ Meteor.methods({
         link_href: "https://twitter.com/RasmusHjulskov/status/"+tweet.id_str        
       });
     }
+  },
+  addInsta : function(ig){
+    if(insta.find({id_str: ig.id}).count() == 0){
+      insta.insert({
+        image: ig.images.low_resolution.url,
+        text: ig.caption.text,
+        link_href: ig.link,
+        published_date: ig.created_time,
+        id_str: ig.id
+      }) 
+    }
   }
 });

@@ -7,7 +7,8 @@ Template['grid'].helpers({
       "src": "//codepen.io/bugarin/embed/BNjZZP/?height=400&theme-id=13100&default-tab=result"
     }
   ],
-  tweets: () => tweets.find()
+  tweets: () => tweets.find(),
+  insta: () => insta.find()
 });
 
 Template['grid'].events({
