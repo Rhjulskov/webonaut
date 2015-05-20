@@ -10,8 +10,12 @@ Template['grid'].helpers({
       "src": "//codepen.io/Yakudoo/embed/eNmjEv/?height=400&theme-id=13100&default-tab=result"
     }
   ],
-  tweets: () => tweets.find(),
-  insta: () => insta.find()
+  socialFeeds: function(){
+    var tweetsFeed = tweets.find().fetch();
+    var instaFeed = insta.find().fetch();
+    var docs = tweetsFeed.concat(instaFeed);
+    return _.sortBy(docs, function(doc) {return doc.text;});
+  }
 });
 
 Template['grid'].events({

@@ -15,43 +15,30 @@
   background-color: rgba($red, .05)
   opacity: 1
   
-  &.visible
+  // &.visible
 
-    img 
-      +transform( translateY(0))
+  //   img 
+  //     +transform( translateY(0))
 
-    &:before 
-      content: ""
-      position: absolute
-      border: 2px solid $blue
-
-      +mq($until: tablet)
-        top: 2%
-        right: 4%
-        height: 96%
-        width: 98%
-      
-      +mq($from: tablet)
-        top: 8%
-        right: 4%
-        height: 84%
-        width: 97%
-
-  h2 
-    // color: $color-blue;
-  
 
   
   &:before 
     content: ""
     position: absolute
-    border: 2px solid transparent
-    +transition(.2s all $a-easing)
-    top: 0
-    right: 0
-    height: 100%
-    width: 100%
+    border: 2px solid $blue
     z-index: 1
+    
+    +mq($until: tablet)
+      top: 2%
+      right: 4%
+      height: 96%
+      width: 98%
+    
+    +mq($from: tablet)
+      top: 8%
+      right: 4%
+      height: 84%
+      width: 97%
   
 
   &__text 
@@ -94,5 +81,3 @@
   img 
     display: block
     width: 100%
-    +transition($a-time all $a-easing)
-    +transform( translateY(0%))

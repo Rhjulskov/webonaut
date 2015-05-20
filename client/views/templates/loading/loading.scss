@@ -13,4 +13,11 @@
   background: $gray-8;;
   color: white;
   z-index: 101;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  .spinner {
+
+  }
 }
