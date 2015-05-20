@@ -5,6 +5,9 @@ Template['grid'].helpers({
     }, 
     {
       "src": "//codepen.io/bugarin/embed/BNjZZP/?height=400&theme-id=13100&default-tab=result"
+    },
+    {
+      "src": "//codepen.io/Yakudoo/embed/eNmjEv/?height=400&theme-id=13100&default-tab=result"
     }
   ],
   tweets: () => tweets.find(),

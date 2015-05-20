@@ -1,7 +1,13 @@
 template(name="instagram")
   .instagram
-    .img-wrapper
-      img(src=image)
+    a(href=link_href)
+      .img-wrapper
+        if video
+          video(muted, volume="0")
+            source(src=video, type='video/mp4')
+        else
+          img(src=image)
+
     h3 #{text}
     
   

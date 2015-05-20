@@ -45,12 +45,15 @@
     +transform-origin(center top)
     +transform-style(preserve-3d)  
   
-  img
+  img,
+  video
+    +backface-visibility(hidden)
     width: 100%
     opacity: 0.5
     +filter(grayscale(100%))
     +transition($a-time all $a-easing)
     display: block
+    z-index: 1
       // +transition(5s all $a-easing)
       // +transform(rotateX(-90deg))
       // +transform-origin(center top)
@@ -108,12 +111,18 @@
 
   &:hover
     z-index: 1
-    img
+
+
+      
+
+    img,
+    video
       // background-color: $color-red;
       +transform(scale(1.1))
       +filter(grayscale(0%))
       opacity: 1
-      box-shadow: -20px 20px 0px 0px rgba($blue , .5)
+      //box-shadow: -20px 20px 0px 0px rgba($blue , .5)
+      
 
     h3
       left: 75%

@@ -13,8 +13,11 @@ Meteor.methods({
     }
   },
   addInsta : function(ig){
+    console.log(ig)
     if(insta.find({id_str: ig.id}).count() == 0){
       insta.insert({
+        type: ig.type,
+        video: ig.type == "video" ? ig.videos.low_bandwidth.url : null,
         image: ig.images.low_resolution.url,
         text: ig.caption.text,
         link_href: ig.link,

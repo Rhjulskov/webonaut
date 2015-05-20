@@ -2,6 +2,13 @@ insta = new Mongo.Collection('insta');
 
 insta.attachSchema(
   new SimpleSchema({
+    type: {
+      type: String
+    },
+    video: {
+      type: String,
+      optional: true
+    },
     image: {
       type: String
     },
