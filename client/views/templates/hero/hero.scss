@@ -117,7 +117,7 @@
         @extend %planet;
         @include linear-gradient( 45deg, $gray-8 , $blue);
         @include transition(1s all ease);
-        border: none;
+        border: 6px solid $gray-8;
         > div {
           background-image: url("/shattered.png");
           position: absolute;
