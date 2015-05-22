@@ -7,9 +7,5 @@ template(name="instagram")
             source(src=video, type='video/mp4')
         else
           img(src=image)
-
-    h3 #{text}
-    
-  
-
-// {{#if position}}grid-element--right{{/if}}
+        i.time-stamp {{fromNow published_date}}
+      h3 #{text}

@@ -7,13 +7,12 @@ Meteor.methods({
         text: currentTweet,
         hashtags: tweet.entities.hashtags,
         id_str: tweet.id_str,
-        published_date: tweet.created_at,
+        published_date: tweet.unixTime,
         link_href: "https://twitter.com/RasmusHjulskov/status/"+tweet.id_str        
       });
     }
   },
   addInsta : function(ig){
-    console.log(ig)
     if(insta.find({id_str: ig.id}).count() == 0){
       insta.insert({
         type: ig.type,

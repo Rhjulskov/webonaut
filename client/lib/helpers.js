@@ -3,5 +3,7 @@ UI.registerHelper("Posts", function() {
 });
 
 UI.registerHelper("fromNow", function(date) {
-  return moment(date, "YYYYMMDD").fromNow(); 
+  var newDate = Number(date);
+  return moment.unix(newDate).fromNow(); 
+  
 });

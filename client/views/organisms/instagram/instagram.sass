@@ -7,10 +7,24 @@
 .instagram 
   +clearfix
   position: relative
-  +transition(3s all $a-easing)
   perspective: 1000px
-  +transform-style(preserve-3d) 
+  // +transform-style(preserve-3d) 
   
+  a
+    color: inherit
+    text-decoration: none
+
+  .time-stamp
+    position: absolute
+    bottom: 0
+    left: 100%
+    color: $red
+    width: 50%
+    padding: 4% 2%
+    opacity: 0
+    +transition($a-time all $a-easing)
+    margin-left: -40px
+    text-align: right
 
   &.visible 
     .img-wrapper
@@ -36,17 +50,26 @@
 
 
   .img-wrapper
-    background: $blue
+    position: relative
+    +backface-visibility(hidden)
     width: 50%
     height: 100%
-    +backface-visibility(hidden)
     +transition($a-time all $a-easing)
     +transform(rotateX(-120deg))
     +transform-origin(center top)
     +transform-style(preserve-3d)  
+    background-color: $blue
+      
+
+  // .instagram__wrapper 
+  //   position: relative
+
+  //   .tweet__time
+
   
   img,
   video
+    position: relative
     +backface-visibility(hidden)
     width: 100%
     opacity: 0.5
@@ -54,9 +77,7 @@
     +transition($a-time all $a-easing)
     display: block
     z-index: 1
-      // +transition(5s all $a-easing)
-      // +transform(rotateX(-90deg))
-      // +transform-origin(center top)
+
 
   h3
     color: $red
@@ -112,8 +133,9 @@
   &:hover
     z-index: 1
 
-
-      
+    .time-stamp
+      margin-left: 0
+      opacity: 1
 
     img,
     video
@@ -121,7 +143,7 @@
       +transform(scale(1.1))
       +filter(grayscale(0%))
       opacity: 1
-      //box-shadow: -20px 20px 0px 0px rgba($blue , .5)
+      box-shadow: -20px 20px 0px 0px rgba($blue , .5)
       
 
     h3

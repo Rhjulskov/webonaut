@@ -1,6 +1,7 @@
 Meteor.startup(function(){
   var Twit = Meteor.npmRequire('twit');
 
+
   T = new Twit({
     consumer_key: '1wjMb4fLRbMEEWKfukDd2lxml',
     consumer_secret: 'xwmwVYGj0aGLPw44tfhvc2SKzvJPuFEH3oaJUq0RI48Y8jg2hb',
@@ -10,6 +11,7 @@ Meteor.startup(function(){
   fetchTweets = function(){
     T.get('search/tweets', { q: 'from:RasmusHjulskov #webonaut', count: 10 }, Meteor.bindEnvironment(function(err, data, response) {
       data.statuses.forEach(function(entry) {
+        entry.unixTime = moment(entry.created_at).unix();
         Meteor.call('addTweet', entry);
       });
     }));

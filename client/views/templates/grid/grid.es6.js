@@ -14,7 +14,8 @@ Template['grid'].helpers({
     var tweetsFeed = tweets.find().fetch();
     var instaFeed = insta.find().fetch();
     var docs = tweetsFeed.concat(instaFeed);
-    return _.sortBy(docs, function(doc) {return doc.text;});
+    var array = _.sortBy(docs, function(doc) {return doc.published_date;});
+    return array.reverse();
   }
 });
 
