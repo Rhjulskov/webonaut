@@ -1,6 +1,6 @@
-//*------------------------------------*\
-  //  #twitter
-//\*------------------------------------*/
+//------------------------------------//
+//  #twitter
+//------------------------------------//
 
 @import ../../../stylesheets/init
 
@@ -8,13 +8,13 @@
   position: relative
   color: black
   color: white
-  +flex-grow(1)
-  +transition($a-time all $a-easing)
-  +transform(translate3d(0,10%,0))
+  flex-grow: 1
+  transition: $a-time all $a-easing
+  transform: translate3d(0,10%,0)
   opacity: 0
 
   &.visible
-    +transform(translate3d(0,0,0))
+    transform: translate3d(0,0,0)
     opacity: 1  
 
   +mq($until: tablet) 
@@ -30,7 +30,7 @@
 
   &:before 
     @extend %h1
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing
     content: "“"
     position: absolute
     top: 10px
@@ -47,7 +47,7 @@
     right: 0
     font-size: 14px
     font-weight: normal
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing
     opacity: 0
     margin-top: -30px
     color: $red
@@ -55,7 +55,7 @@
 
   p 
     position: relative
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing
     color: $blue
     font-weight: 700
     font-size: 20px
@@ -69,7 +69,7 @@
       color: rgba($red, .5)
 
     p
-      +transform(scale(1.1))
+      transform: scale(1.1)
 
     .time-stamp
       opacity: 1

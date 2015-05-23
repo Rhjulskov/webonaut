@@ -1,6 +1,6 @@
-///*------------------------------------*\
-  //  #button
-//\*------------------------------------*/
+// ------------------------------------ //
+//  #button
+// ------------------------------------ //
 
 @import ../../../stylesheets/init
 
@@ -13,7 +13,7 @@ $text-color: white
   border: 2px solid $border-color
   color: $text-color
   display: table
-  +transition($a-time all $a-easing)
+  transition: $a-time all $a-easing;
 
   &.sec 
     border-color: $blue
@@ -22,7 +22,7 @@ $text-color: white
       background: shade( $blue, 20)
 
   &:before 
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing;
     content: ""
     position: absolute
     z-index: -1
