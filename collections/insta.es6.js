@@ -23,6 +23,9 @@ insta.attachSchema(
     },
     id_str: {
       type: String
+    },
+    hashtags: {
+      type: [String]
     }
   })
 );

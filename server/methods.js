@@ -14,14 +14,18 @@ Meteor.methods({
   },
   addInsta : function(ig){
     if(insta.find({id_str: ig.id}).count() == 0){
+      var currentText = ig.caption.text
+      currentText = currentText.replace('#webonaut', '');
+      console.log(ig);
       insta.insert({
         type: ig.type,
         video: ig.type == "video" ? ig.videos.low_bandwidth.url : null,
         image: ig.images.low_resolution.url,
-        text: ig.caption.text,
+        text: currentText,
         link_href: ig.link,
         published_date: ig.created_time,
-        id_str: ig.id
+        id_str: ig.id,
+        hashtags: ig.tags
       }) 
     }
   }
