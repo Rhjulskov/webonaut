@@ -5,7 +5,6 @@
 @import ../../../stylesheets/init
 
 .instagram 
-  +clearfix
   position: relative
   perspective: 1000px
   // +transform-style(preserve-3d) 
@@ -22,13 +21,13 @@
     width: 50%
     padding: 4% 2%
     opacity: 0
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing
     margin-left: -40px
     text-align: right
 
   &.visible 
     .img-wrapper
-      +transform(rotateX(0deg))  
+      transform: rotateX(0deg)
 
     h3
       left: 50%
@@ -41,7 +40,7 @@
     top: 0
     left: 0
     width: 50%
-    +transition($a-time all $a-easing)
+    transition: $a-time all $a-easing
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0)  
     background-image: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/10723959_958466214177352_395250663_n.jpg")
     background-size: cover
@@ -51,13 +50,13 @@
 
   .img-wrapper
     position: relative
-    +backface-visibility(hidden)
+    backface-visibility: hidden
     width: 50%
     height: 100%
-    +transition($a-time all $a-easing)
-    +transform(rotateX(-120deg))
-    +transform-origin(center top)
-    +transform-style(preserve-3d)  
+    transition: $a-time all $a-easing
+    transform: rotateX(-120deg)
+    transform-origin: center top
+    transform-style: preserve-3d  
     background-color: $blue
       
 
@@ -70,11 +69,11 @@
   img,
   video
     position: relative
-    +backface-visibility(hidden)
+    backface-visibility: hidden
     width: 100%
     opacity: 0.5
-    +filter(grayscale(100%))
-    +transition($a-time all $a-easing)
+    filter: grayscale(100%)
+    transition: $a-time all $a-easing
     display: block
     z-index: 1
 
@@ -87,8 +86,8 @@
     top:45%
     left: 20%
     opacity: 0
-    +transform(translateX(-50%) translateY(-50%))
-    +transition($a-time all $a-easing)
+    transform: translateX(-50%) translateY(-50%)
+    transition: $a-time all $a-easing
     
     padding: 10px
 
@@ -106,13 +105,13 @@
 
 .instagram
   +mq($until: tablet)
-    +span-columns(12)  
+    width: 100%
     &:nth-child(2n)
       .image 
         float: right
   
   +mq($from: tablet)
-    +span-columns(6)
+    width: 50%
 
     &:nth-child(3n)
       margin: 0 25%
@@ -140,8 +139,8 @@
     img,
     video
       // background-color: $color-red;
-      +transform(scale(1.1))
-      +filter(grayscale(0%))
+      transform: scale(1.1)
+      filter: grayscale(0%)
       opacity: 1
       box-shadow: -20px 20px 0px 0px rgba($blue , .5)
       

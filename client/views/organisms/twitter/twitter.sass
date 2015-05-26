@@ -5,7 +5,9 @@
 @import ../../../stylesheets/init
 
 .tweet 
+  display: flex
   position: relative
+  align-items: center;
   color: black
   color: white
   flex-grow: 1
@@ -13,7 +15,9 @@
   transform: translate3d(0,10%,0)
   opacity: 0
   padding: 3%
+  margin: 10% 0
   line-height: 1.6em
+
 
   &.visible
     transform: translate3d(0,0,0)
@@ -35,18 +39,6 @@
   a
     text-decoration: none
 
-  &:before 
-    @extend %h1
-    transition: $a-time all $a-easing
-    content: "“"
-    position: absolute
-    top: 10px
-    left: 20px
-    text-transform: lowercase
-    color: rgba($red, .2)
-    font-size: 170px
-    line-height: 200px
-
   .time-stamp
     position: absolute
     top: 100%
@@ -65,8 +57,27 @@
     transition: $a-time all $a-easing
     color: $blue
     font-weight: 700
-    
     z-index: 1
+
+    &:before 
+      @extend %h1
+      transition: $a-time all $a-easing
+      content: "“"
+      position: absolute
+      top: -26px
+      left: -22px
+      text-transform: lowercase
+      color: rgba($red, .2)
+      
+
+      +mq($until: tablet)
+        font-size: 100px
+        line-height: 120px
+
+      +mq($from: tablet)
+        font-size: 170px  
+        line-height: 200px
+
 
   &:hover 
     

@@ -6,9 +6,6 @@
 
 meteor-platform
 startup
-wolves:bourbon
-wolves:neat
-wolves:bitters
 aldeed:collection2
 mquandalle:bower
 iron:router
@@ -31,3 +28,4 @@ http
 msavin:jetsetter
 mquandalle:jade
 momentjs:moment
+wolves:bourbon

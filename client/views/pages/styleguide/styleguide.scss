@@ -10,13 +10,14 @@
 @import "../../../stylesheets/init";
 
 .sg-wrapper {
-  @include outer-container;
+  max-width: 1200px;
+  margin: 0 auto;
   font-family: "helvetica";
   padding-top: 80px;
 }
 
 .sg-element {
- @include clearfix; 
+ // @include clearfix; 
   margin: 30px 0;
   .sg-element__code {
     
@@ -28,17 +29,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  @include clearfix;
+  z-index: 1000;
   width: 100%;
   background: rgba(255,255,255 ,.9);
   color: white;
   font-size: 24px;
   
-
   &__wrapper {
-    @include outer-container;
-    @include display(flex);
+    // @include outer-container;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -50,7 +51,7 @@
   }
 
   &__links {
-    @include flex(1);
+    flex-grow: 1;
     font-size: 16px;
     color: rgba(0,0,0,.7);
     text-decoration: none;
@@ -75,22 +76,25 @@
 /* Color schema ---------------------*/
 
 .sg-colors {
-  @include clearfix;
+  // @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; 
 
   li {
-    @extend %clearfix;
-    @include span-columns(12);
+    // @extend %clearfix;
+    width: 100%;
     @include mq(phablet, tablet) {
-      @include span-columns(6);
-      @include omega(2n);
+      width: 50%;
+      
     }
     @include mq(tablet, desktop){
-      @include span-columns(4);
-      @include omega(3n);
+      width: 33.33%;
+      
     }
     @include mq($from: desktop){
-      @include span-columns(3);
-      @include omega(4n);
+      width: 25%;
+      
     }
     
     margin-bottom: 10px;
@@ -183,7 +187,7 @@
   width: 100%;
 
   .expander-trigger {
-    @include user-select(none);
+    user-select: none;   
     cursor: pointer;
     display: block;
     font-size: $expander-toggle-size;

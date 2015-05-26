@@ -6,7 +6,6 @@ Meteor.startup(function(){
   ig.user_self_media_recent(Meteor.bindEnvironment(function(err, medias, pagination, remaining, limit) {
     if(!err){
       medias.forEach(function(entry){
-        console.log(entry)
         if(entry.tags.indexOf("webonaut") > -1 ||  entry.tags.indexOf("Webonaut") > -1){
           Meteor.call('addInsta', entry) ;
         }

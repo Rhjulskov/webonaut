@@ -6,7 +6,7 @@
 $ani-1: $blue
 $ani-2: $red
 
-@include keyframes(hexdots-loader) 
+keyframes(hexdots-loader) 
   0%
     box-shadow: $ani-2 0 -30px 0 7px, $ani-1 0 -30px 0 7px, $ani-1 26px -15px 0 7px, $ani-1 26px 15px 0 7px, $ani-1 0 30px 0 7px, $ani-1 -26px 15px 0 7px, $ani-1 -26px -15px 0 7px
   8.33%
@@ -45,5 +45,5 @@ $ani-2: $red
   background: transparent
   border-radius: 100%
   box-shadow: $ani-2 0 -30px 0 7px, $ani-1 26px -15px 0 7px, $ani-1 26px 15px 0 7px, $ani-1 0 30px 0 7px, $ani-1 0 30px 0 7px, $ani-1 0 30px 0 7px
-  +animation(hexdots-loader 5s infinite ease-in-out)
-  +transform-origin(50% 50%)
+  animation: hexdots-loader 5s infinite ease-in-out
+  transform-origin: 50% 50%
