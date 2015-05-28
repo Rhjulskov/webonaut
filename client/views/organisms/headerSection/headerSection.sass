@@ -1,0 +1,33 @@
+//------------------------------------//
+// #headerSection
+//------------------------------------//
+
+@import ../../../stylesheets/init
+
+.header-section 
+  clear: both
+  
+  .header-section__background 
+    background: $color-primary
+    height: 350px
+    margin: 20px 0
+
+    +mq($until: tablet)
+      padding: 0 $padding-size
+      width: 90%;
+      float: right
+    
+    +mq($from: tablet)
+      width: 75%;
+      float: right
+    
+  .header-section__text 
+    @extend %vertical-align
+    width: 100%
+    max-width: 400px
+
+    +mq($until: tablet)
+      transform: translateY(-50%)
+
+    +mq($from: tablet)
+      transform: translateX(-50%) translateY(-50%)

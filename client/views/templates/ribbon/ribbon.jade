@@ -1,0 +1,10 @@
+template(name="ribbon")
+  div(class="ribbon {{class}}" data-midnight="alt-color-small")
+    .wrapper
+      if header
+        h2 {{header}}
+      if content
+        p {{content}}
+      if btn_text
+        +button href=btn_href text=btn_text color=btn_color
+    

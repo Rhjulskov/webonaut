@@ -5,7 +5,7 @@
     ".meteor/local/bower/neat/app/assets/stylesheets",
     ".meteor/local/build/programs/server/assets/packages/wolves_bourbon",
     ".meteor/local/build/programs/server/assets/packages/wolves_neat",
-    ".meteor/local/build/programs/server/assets/packages/wolves_bitters" 
+    ".meteor/local/build/programs/server/assets/packages/wolves_bitters"
   ],
   "enableAutoprefixer": true
 }

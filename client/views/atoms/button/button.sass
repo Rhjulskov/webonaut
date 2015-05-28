@@ -1,0 +1,51 @@
+// ------------------------------------ //
+//  #button
+// ------------------------------------ //
+
+@import ../../../stylesheets/init
+
+$border-color:  $red
+$text-color: white
+
+.button 
+  margin: 10px 0
+  padding: 14px 30px
+  border: 2px solid $border-color
+  color: $text-color
+  display: table
+  transition: $a-time all $a-easing;
+
+  &.sec 
+    border-color: $blue
+
+    &:before 
+      background: shade( $blue, 20)
+
+  &:before 
+    transition: $a-time all $a-easing;
+    content: ""
+    position: absolute
+    z-index: -1
+    top: -$border-size/2
+    left: -$border-size/2
+    width: 100%
+    height: 100%
+    background: shade( $border-color, 20)
+
+  &:hover
+  
+    &:before 
+      top: 0px
+      left: 0px
+      background: $border-color
+    
+  &.sec 
+    border-color: $blue
+
+    &:before 
+      background: shade( $blue, 20)
+
+    &:hover 
+    
+      &:before 
+        background: $blue

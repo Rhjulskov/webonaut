@@ -1,0 +1,11 @@
+template(name="instagram")
+  .instagram
+    a(href=link_href)
+      .img-wrapper
+        if video
+          video(muted, volume="0")
+            source(src=video, type='video/mp4')
+        else
+          img(src=image)
+        i.time-stamp {{fromNow published_date}}
+      h3 #{text}
