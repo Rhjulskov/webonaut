@@ -1,0 +1,83 @@
+//------------------------------------//
+//  #imageSection
+//------------------------------------//
+
+@import ../../../stylesheets/init
+
+.imageSection 
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  position: relative
+  width: 90%
+  margin: 30px auto
+  background-color: rgba($red, .05)
+  opacity: 1
+  
+  // &.visible
+
+  //   img 
+  //     +transform( translateY(0))
+
+
+  
+  &:before 
+    content: ""
+    position: absolute
+    border: 2px solid $blue
+    z-index: 1
+    
+    +mq($until: tablet)
+      top: 2%
+      right: 4%
+      height: 96%
+      width: 98%
+    
+    +mq($from: tablet)
+      top: 8%
+      right: 4%
+      height: 84%
+      width: 97%
+  
+
+  &__text 
+    z-index: 1
+    text-align: center
+    
+
+    +mq($until: tablet)
+      width: 100%
+      padding: 8%
+    
+
+    +mq($from: tablet)
+      height: 100%
+      width: 50%
+      padding: 6  % 30px
+    
+  
+
+  &__wrapper 
+    perspective: 500
+    +mq($from: tablet)
+      padding: 0 2%
+      max-width: 400px
+      margin: 0 auto
+      position: relative
+      top: 50%
+      
+    
+  
+
+  &__image 
+    +mq($until: tablet)
+      width: 100%
+    
+
+    +mq($from: tablet)
+      width: 50%
+
+  img 
+    display: block
+    width: 100%

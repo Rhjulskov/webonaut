@@ -1,0 +1,243 @@
+//------------------------------------//
+//  #hero
+//------------------------------------//
+
+@import ../../../stylesheets/init
+
+
+%planet 
+  position: absolute
+  border-radius: 90%
+  border: 4px solid $gray-8
+  transform: translateX(-50%) translateY(50%)
+  box-shadow: 0px 0px 8px 8px rgba(255,255,255, .08)
+
+
+.vertical-align 
+  @extend %vertical-align
+
+.hero 
+  @extend %gray2
+  background: url("/top.jpg")
+  background: url("/space.jpg")
+  background-size: cover
+  color: $gray-1
+  position: relative
+  overflow: hidden 
+  height: 100%
+  min-height: 400px
+  width: 100%
+  z-index: 1
+  
+  .hero-header 
+    position: relative
+    top: 0
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 10px
+    border: 5px solid $red
+    display: table
+    margin: 0 auto
+    //padding: 10px;
+    padding: 0.3em 0.3em 0.1em 0.3em
+    line-height: 1em
+
+    @include mq($until: tablet)
+      font-size: 8vw
+
+    @include mq($from: tablet)
+      font-size: 60px
+
+  .hero-subheader
+    position: relative
+    top: 0
+    line-height: inherit
+    text-align: center
+    padding-top: 20px
+    width: 80%
+    max-width: 500px
+    margin: 0 auto
+    color: white
+
+    @include mq($until: tablet)
+      font-size: 16px
+
+    @include mq($from: tablet)
+      font-size: 24px
+
+  .planets 
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    list-style: none
+
+    li 
+      position: absolute
+      width: 100%
+      height: 100%
+
+      &:nth-child(1) 
+        z-index: 5
+        height: 10%
+        top: 45% !important
+
+      &:nth-child(2) 
+        z-index: 4
+
+      &:nth-child(3) 
+        z-index: 1
+
+      &:nth-child(4) 
+        z-index: 2
+        background-size: 12%
+
+      &:nth-child(5) 
+        z-index: 1
+
+
+      .planet-1 
+        @extend %planet
+        background: linear-gradient( 45deg, $gray-8 , $blue)
+        transition: 1s all ease
+        border: 6px solid $gray-8
+        position: absolute
+        transform: translateX(-50%) scale(4)
+        z-index: 10
+        top: 50%
+        left: 50%
+        width: 90%
+        min-width: 800px
+        overflow: hidden
+        box-shadow: 20px 20px 0 0 rgba(0,0,0, .1), -20px 20px 0 0 rgba(0,0,0, .1)
+
+        > div 
+          background-image: url("/shattered.png")
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          opacity: 0
+
+        &:hover 
+          background-color: $blue-dark
+          transform: translateX(-50%) scale(1.05)
+  
+        &:before 
+          content: ""
+          display: block
+          padding-top: 100%
+
+        // &:before {
+        //   @extend %gray4;
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 3%;
+        //   width: 100%;
+        //   height: 100%;
+        //   border-radius: 90%;
+        // }
+
+        // &:after {
+        //   @extend %gray3;
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: 8%;
+        //   width: 100%;
+        //   height: 100%;
+        //   border-radius: 90%;
+        // }
+      
+
+      .planet-2 
+        @extend %planet
+        @extend %gray4
+        background: linear-gradient( #A16D94 , $blue)
+        left: 20%
+        top: 10%
+        width: 160px
+        height: 160px
+        
+        &:before 
+          color: $gray-8
+          content: ""
+          position: absolute
+          top: 20%
+          left: 20%
+          height: 4px
+          width: 40px
+          border-radius: 2px
+          background-color: currentColor
+          box-shadow: 10px 10px 0 0 currentColor
+
+
+      .planet-3 
+        @extend %planet
+        @extend %gray5
+        background: linear-gradient(45deg, $red, $blue-dark)
+        left: 80%
+        top: 20%
+        width: 230px
+        height: 230px
+        // background: url("http://kurzgesagt.org/wp-content/uploads/static/keyvisual.gif");
+        // background-size: cover;
+        // border: none;
+
+      .planet-4 
+        @extend %planet
+        @extend %gray3
+        background: linear-gradient(45deg, $blue-dark , $blue)
+        left: 30%
+        top: 5%
+        border: 6px solid $gray-8
+        width: 80px
+        height: 80px
+
+        &:after 
+          content: ""
+          position: absolute
+          top: 50%
+          left: -50%
+          width: 200%
+          height: 4px
+          margin-top: -2px
+          border-radius: 2px
+          transform: rotate(30deg)
+          background-color: $gray-8
+
+
+      .planet-5 
+        @extend %planet
+        @extend %gray3
+        //@include linear-gradient(45deg, #C7C9DD , #A16D94);  
+        background-color: #ffd200
+        border: 4px solid rgba(255,255,0, .6)
+        left: 65%
+        top: 25%
+        width: 90px
+        height: 90px
+
+      .planet-6 
+        @extend %planet
+        @extend %gray3
+        background: linear-gradient(45deg, #A16D94 , $red)  
+        left: 60%
+        top: 15%
+        width: 40px
+        height: 40px
+
+      .planet-7 
+        @extend %planet
+        @extend %gray3
+        //@include linear-gradient(45deg, $color-blue , #A3A8C9);  
+        background: #d1413a
+        border: 4px solid #e78553
+        left: 40%
+        top: 15%
+        width: 40px
+        height: 40px

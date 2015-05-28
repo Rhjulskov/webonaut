@@ -1,0 +1,104 @@
+{
+  "Frontpage": {
+    "templates": [
+      { "name": "sgcolors",
+        "data": [
+          {
+            "name": "Blue",
+            "var": "$color-primary",
+            "color": "#5A6BA0",
+            "variation": [
+              {
+                "var": "tint",
+                "color": "#6A79A9"
+              },
+              {
+                "var": "shade",
+                "color": "#2F3549"
+              }
+            ]
+          },
+          {
+            "name": "Red",
+            "var": "$color-secondary",
+            "color": "#E64675"
+          },
+          {
+            "name": "primary-color",
+            "var": "$color-yellow",
+            "color": "#FFF05E"
+          },
+          {
+            "name": "primary-color",
+            "var": "$blue-dark",
+            "color": "#2F3549"
+          },
+          {
+            "name": "demo-red",
+            "color": "#f95657"
+          },
+          {
+            "name": "demo-blue",
+            "color": "#3b3f4b"
+          },
+          {
+            "name": "demo-lightblue",
+            "color": "#01b9ff"
+          },
+          {
+            "name": "demo-yellow",
+            "color": "#fddd18"
+          },
+          {
+            "name": "primary-color",
+            "var": "primary-color",
+            "color": "#6D6E71"
+          },
+          {
+            "name": "primary-color",
+            "var": "primary-color",
+            "color": "#58595B"
+          },
+          {
+            "name": "primary-color",
+            "var": "primary-color",
+            "color": "#414042"
+          }
+        ]
+      },
+      {"name": "sgfonts"}
+    ]
+  },
+  "Atoms": {
+    "templates": [
+      {"name": "logo"},
+      {"name": "logoBlue"},
+      {"name": "logoBlueSmall"},
+      {"name": "logoRed"},
+      {"name": "logoRedSmall"},
+      {"name": "button"},
+      {"name": "gradient"}
+    ]
+  },
+  "Molecules": {
+    "templates": [
+      {"name": "quote"}
+    ]
+  },
+  "Organisms": {
+    "templates": [
+      {"name": "headerSection"},
+      {"name": "instagram"},
+      {"name": "textarea"},
+      {"name": "twitter"}
+    ]
+  },
+  "Templates": {
+    "templates": [
+      {"name": "imageSection"},
+      {"name": "grid"},
+      {"name": "footer"},
+      {"name": "ribbon"}
+    ]
+  }
+}

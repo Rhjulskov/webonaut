@@ -1,0 +1,17 @@
+template(name="imageSection")
+  .imageSection
+    .imageSection__text
+      .imageSection__wrapper
+        if header
+          h2 {{header}}
+        if content
+          p {{content}}
+
+        if btn_text
+          +button href=btn_href text=btn_text color=btn_color
+
+    if image_src
+      .imageSection__image
+        img(src=image_src alt=image_alt)
+
+

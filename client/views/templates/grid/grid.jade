@@ -1,0 +1,32 @@
+template(name="grid")
+  h2 Let's be social #webonaut
+  section.grid(data-midnight="alt-color")#context-example
+    //- each tweets
+    //-   +twitter
+
+    //- each insta
+    //-   +instagram
+
+    each socialFeeds
+      if image
+        +instagram
+      else
+        +twitter
+
+    //- +twitter
+    //- +instagram
+    //- +twitter
+    //- +instagram
+    //- +instagram
+    //- +twitter
+    //- +instagram
+    //- +instagram position="right"
+    //- +twitter
+    //- +twitter
+    //- +twitter
+    //- +instagram position="right"
+    //- +instagram
+    
+    //- each codepens
+    //-   +codepen src=src
+    //-   

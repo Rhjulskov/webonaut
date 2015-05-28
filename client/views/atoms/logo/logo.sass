@@ -1,0 +1,24 @@
+//------------------------------------//
+//  #logo
+//------------------------------------//
+
+@import ../../../stylesheets/init
+
+.logo
+  position: relative
+  max-width: 320px
+  width: 40%
+  display: block
+  margin-bottom: 14px
+  margin-left: auto
+  margin-right: auto
+
+.logo--animation 
+  polygon 
+    opacity: 0
+
+  > polygon 
+    .no-cssanimations &
+    .no-js & 
+      transform: scale(1)
+      opacity: 1

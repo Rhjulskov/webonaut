@@ -1,0 +1,51 @@
+//------------------------------------//
+//  #header
+//------------------------------------//
+
+@import ../../../stylesheets/init
+
+.header 
+  color: $color-primary
+  position: fixed
+  z-index: 100
+  top: 0
+  left: 0
+  width: $header-height + $border-size*3
+  height: $header-height + $border-size*3
+
+  .header__logo 
+    font-weight: 800
+    color: $red
+    font-size: 30px
+    text-transform: uppercase
+    text-decoration: none
+    position: fixed
+    top: 0
+    left: 0
+    line-height: $header-height
+    padding-left: $border-size*2;
+
+  .header__menu 
+    float: right
+  
+    li 
+      float:left
+      list-style: none
+      font-size: 30px
+      color: currentColor
+      margin-left: 20px
+      line-height: $header-height
+
+
+.midnightHeader 
+  .logo 
+    padding: 0
+    margin: 0
+    height: $header-height
+    width: $header-height
+    margin: $border-size*1.2 0 0 $border-size*1.2
+  
+  &.alt-color 
+    .logo 
+      color: yellow
+    
