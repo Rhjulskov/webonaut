@@ -15,7 +15,7 @@
   transform: translate3d(0,10%,0)
   opacity: 0
   padding: 3%
-  margin: 10% 0
+  margin: 5% 0
   line-height: 1.6em
 
 
@@ -80,14 +80,12 @@
 
 
   &:hover 
-    
-    &:before 
-      top: -10px
-      left: 0px
-      color: rgba($red, .5)
-
     p
       transform: scale(1.1)
+
+      &:before 
+        transform: translateX(2%) translateY(-2%) scale(1.2)
+        color: rgba($red, .3)
 
     .time-stamp
       opacity: 1

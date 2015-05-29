@@ -11,17 +11,7 @@ Template['frontpage'].events({
 
 Template.frontpage.rendered = function () {
   //$('.imageSection').css('height', '0px').find('img').css({height: '0px', opacity: 0});
-
-  var waypoints = $('.tweet, .instagram, .imageSection').waypoint({
-    handler: function(direction) {
-      if (direction === 'down') {
-        $(this).addClass("visible")
-      } else {
-        $(this).removeClass("visible")
-      }
-    },
-    offset: '80%'
-  })
+  
 
   var imageAnimation = {width:"50%", ease:Linear.easeNone}
   // var waypoints = $('.imageSection').waypoint({
