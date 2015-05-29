@@ -1,5 +1,5 @@
 template(name="grid")
-  section.grid(data-midnight="alt-color")#context-example
+  section.grid(data-midnight="alt-color-small")#context-example
     .grid__header
       h2 Let's be social
       h3 #webonaut on Twitter and Instagram
@@ -12,8 +12,11 @@ template(name="grid")
     each socialFeeds
       if image
         +instagram
+      else if grid__end
+        +gridEnd
       else
         +twitter
+
 
     //- +twitter
     //- +instagram
