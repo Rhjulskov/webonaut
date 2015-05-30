@@ -15,16 +15,22 @@
     width: 100%
     
     &:nth-child(2n)
-      .image 
-        float: right
-
-    &:nth-child(even)
       .img-wrapper
-        transform: translateX(0%) 
+        order: 2
 
-      &:hover
-        h3
-          transform: translateX(0%) 
+      h3 
+        order: 1
+        transform: translateX(100%) 
+
+    &.visible
+      &:nth-child(2n)
+
+        h3 
+          transform: translateX(50%) 
+
+        &:hover
+          h3
+            transform: translateX(0%) 
 
   
   +mq($from: tablet)
@@ -89,6 +95,7 @@
     color: $red
     line-height: 1.2em
     width: 40%
+    margin: 0 5%
     opacity: 0
     transform: translateX(-100%) 
     transition: $a-time all $a-easing
@@ -121,7 +128,7 @@
         opacity: 1
 
       h3
-        transform: translateX(15%) 
+        transform: translateX(0) 
         color: $blue
         border-color: $blue
 
