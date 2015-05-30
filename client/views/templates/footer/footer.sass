@@ -5,10 +5,10 @@
 @import ../../../stylesheets/init
 
 .footer 
-  margin-top: 100px
+  padding-top: 100px
 
   +mq($until: tablet)
-    margin-bottom: 6px
+    padding-bottom: 16px
 
   ul 
     display: flex
@@ -78,18 +78,29 @@
 
         +mq($until: tablet)
           position: absolute
-          top: 0
+          top: -1em
           left: 0
           width: 100%
           text-align: center
+
+        +mq($until: phone)
+          top: -1.8em
+          
 
         +mq($from: tablet)
           text-align: right
       
         div
+          +mq($until: phone)
+            // display: inline-block
+            font-size: 30vw
+            line-height: 0.6em
+            
+
           +mq($until: tablet)
-            display: inline-block
-            font-size: 14vw
+            // display: inline-block
+            font-size: 16vw
+            line-height: 0.6em
 
 
           &:nth-child(2)
