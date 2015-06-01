@@ -14,8 +14,7 @@
   transition: $a-time all $a-easing
   transform: translate3d(0,10%,0)
   opacity: 0
-  padding: 3%
-  margin: 5% 0
+  min-height: 160px
   line-height: 1.6em
 
 
@@ -25,7 +24,7 @@
 
   +mq($until: desktop) 
     width: 50%
-    margin: 4% 0
+    margin: 6%
 
   +mq($from: desktop) 
     width: 25%
@@ -67,7 +66,8 @@
       top: -26px
       left: -22px
       text-transform: lowercase
-      color: rgba($red, .2)
+      color: rgba($red, 0.2)
+      z-index: -1
       
 
       +mq($until: tablet)
