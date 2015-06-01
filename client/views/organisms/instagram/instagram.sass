@@ -14,7 +14,7 @@
   +mq($until: tablet)
     width: 100%
     
-    &:nth-child(2n)
+    &:nth-child(odd)
       .img-wrapper
         order: 2
 
@@ -23,7 +23,7 @@
         transform: translateX(100%) 
 
     &.visible
-      &:nth-child(2n)
+      &:nth-child(odd)
 
         h3 
           transform: translateX(50%) 
@@ -38,23 +38,8 @@
 
     &:nth-child(3n)
       margin: 0 25%
-
-  // &--right,
-  // //hack:!
-  // &:nth-child(5n)
-  //   @extend %gray7
-  
-  //   .img-wrapper 
-  //     background-color: $color-red
-  //     margin-left: 50%
-    
-  //   h3 
-  //     left: 25%
-  //     top: 50%
-
   
       
-
   .time-stamp
     position: absolute
     top: 100%
@@ -69,7 +54,7 @@
   
   .img-wrapper
     position: relative
-    // backface-visibility: hidden
+    backface-visibility: hidden
     opacity: 0
     width: 50%
     height: 100%
@@ -103,11 +88,11 @@
     padding: 10px
 
     +mq($until: tablet)
-      font-size: 16px
+      font-size: 14px
       border: 2px solid $red
 
     +mq($from: tablet)
-      font-size: 22px
+      font-size: 20px
       border: 3px solid $red
 
 

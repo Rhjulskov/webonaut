@@ -51,6 +51,16 @@ body
 $btn-size: 10px
 $browser-height: 30px
 
+.slide-up 
+  transform: translateY(60px) scale(0.6)
+  opacity: 0
+  transition: $a-time all $a-easing
+  
+  &.visible
+    opacity: 1
+    transform: translateY(0px) scale(1)
+
+
 
 @media print 
   * 

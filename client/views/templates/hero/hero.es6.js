@@ -49,5 +49,5 @@ Template['hero'].rendered = function () {
     .to(main_planet_bg, 2, {opacity:1, ease:Back.easeOut}, 1)
     .staggerFromTo(planets, polylion_duration, polylion_staggerFrom, polylion_staggerTo, planets_stagger, 1)
     .staggerFromTo(polylion_shapes, polylion_duration, polylion_staggerFrom, polylion_staggerTo, polylion_stagger, 0)
-    .staggerFrom(hero_header, 0.5, { top: 200, opacity: 0, immediateRender:true, ease: Back.easeInOut}, 0.1);
+    .staggerFrom(hero_header, 0.7, { top: 200, opacity: 0, ease: Back.easeInOut}, 0.2);
 };
