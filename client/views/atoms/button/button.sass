@@ -8,44 +8,47 @@ $border-color:  $red
 $text-color: white
 
 .button 
+  position: relative
   margin: 10px 0
   padding: 14px 30px
-  border: 2px solid $border-color
   color: $text-color
   display: table
-  transition: $a-time all $a-easing;
-
-  &.sec 
-    border-color: $blue
-
-    &:before 
-      background: darken( $blue, 15)
+  transition: $a-time all ease
+  cursor: pointer
+  color: white;
 
   &:before 
-    transition: $a-time all $a-easing;
+    transition: $a-time all ease
     content: ""
+    z-index: -2
     position: absolute
-    z-index: -1
     top: -$border-size/2
     left: -$border-size/2
     width: 100%
     height: 100%
     background: darken( $border-color, 15)
 
-  &:hover
-  
-    &:before 
-      top: 0px
-      left: 0px
-      background: $border-color
-    
+  &:after 
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0 
+    width: 100%
+    height: 100%
+    border: 2px solid $border-color
+
   &.sec 
     border-color: $blue
 
     &:before 
       background: darken( $blue, 15)
 
-    &:hover 
+
+  &:hover
+
+    &:before 
+      top: 0px
+      left: 0px
+      background: $border-color
     
-      &:before 
-        background: $blue

@@ -1,13 +1,8 @@
 template(name="grid")
   section.grid(data-midnight="alt-color-small")#context-example
     .grid__header
-      h2 Let's be social
-      h3 #webonaut on Twitter and Instagram
-    //- each tweets
-    //-   +twitter
-
-    //- each insta
-    //-   +instagram
+      h2.slide-up Let's be social
+      h3.slide-up #webonaut on Twitter and Instagram
 
     each socialFeeds
       if image
@@ -16,21 +11,6 @@ template(name="grid")
         +gridEnd
       else
         +twitter
-
-
-    //- +twitter
-    //- +instagram
-    //- +twitter
-    //- +instagram
-    //- +instagram
-    //- +twitter
-    //- +instagram
-    //- +instagram position="right"
-    //- +twitter
-    //- +twitter
-    //- +twitter
-    //- +instagram position="right"
-    //- +instagram
     
     //- each codepens
     //-   +codepen src=src

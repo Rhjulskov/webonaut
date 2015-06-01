@@ -1,17 +1,18 @@
 template(name="imageSection")
   section.imageSection(data-midnight="default")
-    .imageSection__text
-      .imageSection__wrapper
-        if header
-          h2 {{header}}
-        if content
-          p {{content}}
+    .section-wrapper
+      .imageSection__text
+        .imageSection__wrapper
+          if header
+            h2.slide-up {{header}}
+          if content
+            p.slide-up {{content}}
 
-        if btn_text
-          +button href=btn_href text=btn_text color=btn_color
+          if btn_text
+            +button href=btn_href text=btn_text color=btn_color
 
-    if image_src
-      .imageSection__image
-        img(src=image_src alt=image_alt)
+      if image_src
+        .imageSection__image
+          img(src=image_src alt=image_alt)
 
 
