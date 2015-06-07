@@ -18,9 +18,6 @@
 
 .hero 
   @extend %gray2
-  background: url("/top.jpg")
-  background: url("/space.jpg")
-  background-size: cover
   color: $gray-1
   position: relative
   overflow: hidden 
@@ -97,6 +94,13 @@
       &:nth-child(5) 
         z-index: 1
 
+      &.hero__background 
+        background: url("/space.jpg")
+        width: 110%
+        height: 110%
+        top: -5% !important
+        left: -5% !important
+        background-size: cover
 
       .planet-1 
         @extend %planet

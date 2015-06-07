@@ -10,71 +10,83 @@
   +mq($until: tablet)
     padding-bottom: 16px
 
+  +mq($from: tablet)
+    margin-bottom: 36px
+
+
   ul 
     display: flex
     flex-wrap: wrap
+    border: 2px solid $blue
 
     li
       display: flex 
-      align-items: center
+      align-items: stretch
       position: relative
-      padding: 14px 22px
+      padding: 6px
+      border: 2px solid $blue
       
       +mq($until: tablet)
         width: 100%
 
       +mq($from: tablet)
-        width: 33%
+        width: 33.33%
 
       
-        // &:nth-child(1)        
-        //   display: none
-
       &:nth-child(1)
-        align-self: flex-start
+        font-family: jaapokki-subtract
+        color: $red
+        font-size: 4.8vw
+        padding: 0.6em 0 0.4em 0
+        text-transform: uppercase
 
-      &:nth-child(2)
-        background: rgba($blue,.8)
-        color: white
-        
+        +mq($until: tablet)
+          font-size: 14vw
+          order: 1
+
         +mq($from: tablet)
-          &:after
-            content: "2015"
-            border-bottom: 4px solid rgba($blue,.8)
-            border-right: 4px solid rgba($blue,.8)
-            border-left: 4px solid rgba($blue,.8)
-            color: rgba($blue,.8)
-            font-size: 16px
-            position: absolute
-            top: 100%
-            right: 100%
-            transform: rotate(90deg)
-            transform-origin: right top 0
-            font-weight: 900
-            line-height: 16px
-            padding: 4px 4px 0 4px
-            font-family: jaapokki-subtract
+          font-size: 4.8vw
+          order: -1
+        
 
+    
+        
+        
       &:nth-child(3) 
-        border: 4px solid rgba($blue,.8)
         color: $blue
+        +mq($until: tablet)
+          order: -1
+
+        
+        
       
+      .footer__content
+        display: flex 
+        align-items: center
+        width: 100%
+        padding: 0 1px
+
+        &.footer__content--bg 
+          background-color: $red
+          color: white;
+
       p 
         color: inherit 
         text-align: center;
         width: 100%
         font-weight: bold
+        padding: 20px 10px
 
       a 
         color: $red
 
       .footer__header 
+        font-family: jaapokki-subtract
         color: $red
         font-size: 10vw
         text-transform: uppercase
         line-height: 0.5em
         letter-spacing: -3px
-        font-family: jaapokki-subtract
 
         +mq($until: tablet)
           position: absolute
