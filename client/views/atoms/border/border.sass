@@ -7,17 +7,20 @@
 +mq($from: tablet)
   %border 
     position: fixed
-    background-color: currentColor
     z-index: 101
 
-    &:after 
-      content: ""
-      position: fixed
-      background-color: currentColor
+    // &:after 
+    //   content: ""
+    //   position: fixed
+    //   background-color: inherit
     
   
-  .border 
-    color: $blue-dark
+  .border-ele 
+    background-color: $blue-dark
+    transition: background-color ease 1s
+
+    &.border--sec
+      background-color: $red-dark
   
   .border-vertical 
     @extend %border
@@ -26,11 +29,18 @@
     height: 100%
     width: $border-size
 
-    &:after 
-      right: 0
-      top: 0
-      height: 100%
-      width: $border-size
+  .border-vertical-2
+    @extend %border
+    right: 0
+    top: 0
+    height: 100%
+    width: $border-size
+
+    // &:after 
+    //   right: 0
+    //   top: 0
+    //   height: 100%
+    //   width: $border-size
     
   .border-horizontal 
     @extend %border
@@ -39,8 +49,15 @@
     width: 100%
     height: $border-size
 
-    &:after 
-      left: 0
-      bottom: 0
-      width: 100%
-      height: $border-size
+  .border-horizontal-2
+    @extend %border
+    left: 0
+    bottom: 0
+    width: 100%
+    height: $border-size
+
+    // &:after 
+    //   left: 0
+    //   bottom: 0
+    //   width: 100%
+    //   height: $border-size
