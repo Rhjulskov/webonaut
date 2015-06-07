@@ -23,6 +23,19 @@ Template.gridEnd.rendered = function () {
         //TweenMax.from($(this), 0.5, {scale:0.6, marginTop: 200, opacity: 0});
         offset: '100%'
       });
+
+      var waypoints = $('.footer').waypoint({
+        handler: function(direction) {
+          if (direction === 'down') {
+            $(".border-ele").addClass("border--sec")
+          } else {
+            $(".border-ele").removeClass("border--sec")
+          }
+        },
+        //TweenMax.from($(this), 0.5, {scale:0.6, marginTop: 200, opacity: 0});
+        offset: '110%'
+      });
+
     });
     initialize()
   // },23000)
