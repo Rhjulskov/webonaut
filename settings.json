@@ -2,5 +2,10 @@
     "orion-cli": {
         "profile": "es6",
         "config": "private/orion-config.json"
+    },
+    "public": {
+        "ga": {
+            "id": "UA-63838966-1"
+        }
     }
 }
