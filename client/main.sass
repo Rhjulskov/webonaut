@@ -60,6 +60,23 @@ $browser-height: 30px
     opacity: 1
     transform: translateY(0px) scale(1)
 
+// HACKY OVERWRITE TO ENABLE SG VIEW
+.sg-wrapper .sg-element
+  .slide-up
+    opacity: 1
+    transform: translateY(0px) scale(1) 
+
+  .instagram 
+    .img-wrapper
+      transform: rotateX(0deg) 
+      opacity: 1 
+
+    h3
+      transform: translateX(-50%) 
+      opacity: 1 
+  .tweet
+    transform: translate3d(0,0,0)
+    opacity: 1 
 
 
 @media print 

@@ -1,4 +1,3 @@
-
 tweets = new Mongo.Collection('tweets');
 
 tweets.attachSchema(

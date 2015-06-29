@@ -43,13 +43,19 @@
         ]
       },
       {"name": "sgfonts"},
+      {"name": "spinner"},
       {"name": "logo"},
       {"name": "logoBlue"},
       {"name": "logoBlueSmall"},
       {"name": "logoRed"},
       {"name": "logoRedSmall"},
-      {"name": "button"},
-      {"name": "gradient"}
+      {
+        "name": "button",
+        "data": {
+          "text": "button text",
+          "color":"btn_color"
+        }
+      }
     ]
   },
   "Molecules": {
@@ -59,18 +65,43 @@
   },
   "Organisms": {
     "templates": [
-      {"name": "headerSection"},
-      {"name": "instagram"},
+      {
+        "name": "instagram",
+        "data": {
+          "text": "lorem ipsum",
+          "image": "http://www.placehold.it/400x400"
+        }
+      },
       {"name": "textarea"},
-      {"name": "twitter"}
+      {
+        "name": "twitter",
+        "data": {
+          "text": "lorem ipsum dolor sit" 
+        }
+      }
     ]
   },
   "Templates": {
     "templates": [
-      {"name": "imageSection"},
-      {"name": "grid"},
-      {"name": "footer"},
-      {"name": "ribbon"}
+      {
+        "name": "imageSection",
+        "data": {
+          "header": "Lorem upsum dolor sit",
+          "content": "lorem",
+          "image_src": "http://placehold.it/600x600",
+          "btn_text": "btn_text"
+        }
+      },
+      {
+        "name": "ribbon",
+        "data": {
+          "header": "header",
+          "content": "content",
+          "btn_text": "btn_text"
+        }
+      },
+      {"name": "footer"}
+      
     ]
   }
 }
