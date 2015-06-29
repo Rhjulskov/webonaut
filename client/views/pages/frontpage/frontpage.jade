@@ -1,19 +1,22 @@
 template(name="frontpage")
   +border
-  +hero
+  +hero(
+    header="Webonaut"
+    content="My self-appointed title covering the curiosity for all that is web. Launch the shuttle!"
+  )
   +imageSection(
-    header="Lorem upsum dolor sit" 
-    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis deleniti iusto quia, ut nobis, incidunt molestiae nemo enim optio voluptas esse natus culpa repellendus doloribus placeat rem ex molestias." 
-    btn_href="#" 
-    btn_text="heh"
+    header="Freelance Meteor developer" 
+    content="I'm a ambitious fullstack delevoper based in Aarhus, Denmark focusing on webapps development in Meteor.js. I've had years of experience in multiple agencies as a frontend developer. I'm always curious and adopting new technologies, as the web is not just a job but a passion. This site and other projects are opensource on Github. Feel free to use what you want, star, fork and follow me!" 
     image_src="/webonaut_profile_blue.png"
     image_alt="profile picture"
+    btn_href="https://github.com/Rhjulskov/"
+    btn_text="My Github page"
   )
   +ribbon(
-    header="About me" 
-    content="hello world"
-    btn_href="#"
-    btn_text="o1o1"
+    header="Meteor Aarhus Meetup" 
+    content="I'm the organizer of a Meteor Meetup group in Aarhus, Denmark. If you'r interested in Meteor, you should be joining our next meetup the 13th of August. We're starting with a Meteor 101 speak targeted beginners. "
+    btn_href="http://www.meetup.com/Meteor-Arhus/"
+    btn_text="Join our next meetup"
   )
   +grid(
     header="Let's be social"
@@ -21,7 +24,8 @@ template(name="frontpage")
   )
   +ribbon(
     class="ribbon--secondary" 
-    header="Contact me!" 
-    content="Are you interested?" 
+    header="Are you interested?" 
+    content="Do you have a project, need a hand or just want to talk tech." 
+    btn_href="mailto:rhjulskov@gmail.com"
     btn_text="Contact me"
   )
