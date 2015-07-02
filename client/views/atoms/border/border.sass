@@ -5,24 +5,24 @@
 @import ../../../stylesheets/init
 
 +mq($from: tablet)
-  %border 
+  %border
     position: fixed
     z-index: 101
 
-    // &:after 
+    // &:after
     //   content: ""
     //   position: fixed
     //   background-color: inherit
-    
-  
-  .border-ele 
+
+
+  .border-ele
     background-color: $blue-dark
-    transition: background-color ease 1s
+    transition: background-color ease 0.5s
 
     &.border--sec
       background-color: $red-dark
-  
-  .border-vertical 
+
+  .border-vertical
     @extend %border
     left: 0
     top: 0
@@ -36,13 +36,13 @@
     height: 100%
     width: $border-size
 
-    // &:after 
+    // &:after
     //   right: 0
     //   top: 0
     //   height: 100%
     //   width: $border-size
-    
-  .border-horizontal 
+
+  .border-horizontal
     @extend %border
     left: 0
     top: 0
@@ -56,7 +56,7 @@
     width: 100%
     height: $border-size
 
-    // &:after 
+    // &:after
     //   left: 0
     //   bottom: 0
     //   width: 100%

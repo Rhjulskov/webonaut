@@ -1,5 +1,4 @@
 HTTP.call("GET", '/styleguide-config.json', function(e, content){
-  console.log(content.data);
   Session.set("sg-data", content.data);
 })
 
@@ -26,7 +25,7 @@ Template['styleguide'].events({
 
 
 Template.styleguide.rendered = function(){
-  
+
 
 
   // expand trigger
@@ -56,7 +55,7 @@ Template.styleguide.rendered = function(){
 };
 
 
-    
+
 
 
 

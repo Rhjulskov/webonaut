@@ -4,7 +4,7 @@
 
 @import ../../../stylesheets/init
 
-.tweet 
+.tweet
   display: flex
   position: relative
   align-items: center;
@@ -20,15 +20,16 @@
 
   &.visible
     transform: translate3d(0,0,0)
-    opacity: 1  
+    opacity: 1
 
-  +mq($until: desktop) 
-    width: 50%
-    margin: 6%
+  +mq($until: desktop)
+    width: 30%
+    margin: 2% 10%
 
-  +mq($from: desktop) 
+  +mq($from: desktop)
     width: 25%
-    
+    margin: 0 3%
+
   +mq($until: tablet)
     font-size: 14px
 
@@ -51,14 +52,14 @@
     color: $red
     text-align: center
 
-  p 
+  p
     position: relative
     transition: $a-time all $a-easing
     color: $blue
     font-weight: 700
     z-index: 1
 
-    &:before 
+    &:before
       @extend %h1
       transition: $a-time all $a-easing
       content: "“"
@@ -68,29 +69,25 @@
       text-transform: lowercase
       color: rgba($red, 0.2)
       z-index: -1
-      
+
 
       +mq($until: tablet)
         font-size: 100px
         line-height: 120px
 
       +mq($from: tablet)
-        font-size: 170px  
+        font-size: 170px
         line-height: 200px
 
 
-  &:hover 
+  &:hover
     p
       transform: scale(1.1)
 
-      &:before 
+      &:before
         transform: translateX(2%) translateY(-2%) scale(1.2)
         color: rgba($red, .3)
 
     .time-stamp
       opacity: 1
       margin-top: 0px
-
-    
-
- 

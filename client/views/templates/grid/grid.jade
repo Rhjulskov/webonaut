@@ -1,8 +1,10 @@
 template(name="grid")
   section.grid(data-midnight="alt-color-small")#context-example
     .grid__header
-      h2.slide-up Let's be social
-      h3.slide-up #webonaut on Twitter and Instagram
+      if header
+        h2.slide-up {{header}}
+      if subheader
+        h3.slide-up {{subheader}}
 
     each socialFeeds
       if image

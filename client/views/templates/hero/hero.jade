@@ -4,8 +4,10 @@ template(name="hero")
       li.layer(data-depth="0.1")
         .vertical-align
           +logoBlue animation="logo--animation"
-          h1.hero-header Webonaut
-          h3.hero-subheader My self-appointed title covering the curiosity for all that is web. Launch the shuttle!
+          if header
+            h1.hero-header {{header}}
+          if content
+            h3.hero-subheader {{content}}
 
 
       li.layer(data-depth="0.3")
