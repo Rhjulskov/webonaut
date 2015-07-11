@@ -10,13 +10,14 @@ Meteor.methods({
         access_token_secret: Meteor.settings.twitter.access_token_secret
       })
       T.get('search/tweets', { q: 'from:RasmusHjulskov #webonaut', count: 100 }, Meteor.bindEnvironment(function(err, data, response) {
-         if(!err){
-          data.statuses.forEach(function(entry) {
-            console.log(entry)
-            entry.unixTime = moment(entry.created_at).unix();
-            Meteor.call('addTweet', entry);
-          });
-         }
+        if(!err){
+          if(data.statuses.length != 0){
+            data.statuses.forEach(function(entry) {
+              entry.unixTime = moment(entry.created_at).unix();
+              Meteor.call('addTweet', entry);
+            });
+          }
+        }
       }));
     }, 60 * 1000));
 
