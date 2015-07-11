@@ -1,7 +1,7 @@
 
 Meteor.methods({
   fetchTwitterApi: function(){
-    var tweetDebounce = _.debounce(Meteor.bindEnvironment(function(){
+  /*  var tweetDebounce = _.debounce(Meteor.bindEnvironment(function(){
       var Twit = Meteor.npmRequire('twit');
       T = new Twit({
         consumer_key: Meteor.settings.twitter.consumer_key,
@@ -20,6 +20,6 @@ Meteor.methods({
       }));
     }, 60 * 1000));
 
-    tweetDebounce();
+    tweetDebounce();*/
   }
 });
