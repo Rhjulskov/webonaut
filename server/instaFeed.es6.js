@@ -1,6 +1,6 @@
 Meteor.methods({
   fetchInstaApi: function(){
-    var instaDebounce = _.debounce(Meteor.bindEnvironment(function(){
+    /*var instaDebounce = _.debounce(Meteor.bindEnvironment(function(){
       var ig = Meteor.npmRequire('instagram-node').instagram();
 
       ig.use({ access_token: Meteor.settings.instagram.access_token });
@@ -14,6 +14,6 @@ Meteor.methods({
         }
       }, 60 * 1000));
     }));
-    instaDebounce();
+    instaDebounce();*/
   }
 });
