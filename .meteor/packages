@@ -21,13 +21,10 @@ npm-container
 manuelschoebel:wait-on-lib
 fourseven:scss
 grigio:babel
-markdown
-simple:highlight.js
-msavin:mongol
-http
-msavin:jetsetter
 mquandalle:jade
 momentjs:moment
 spiderable
 manuelschoebel:ms-seo
 reywood:iron-router-ga
+meteortoys:allthings
+rhjulskov:hubble
