@@ -4,7 +4,7 @@
 
 @import ../../../stylesheets/init
 
-.imageSection 
+.imageSection
   display: flex
   flex-wrap: wrap
   align-items: center
@@ -13,6 +13,39 @@
   width: 90%
   padding: 30px 0
   margin: 0 auto
+
+  &:before
+    content: ""
+    position: absolute
+    border: 2px solid $blue
+    z-index: 1
+    right: 4%
+
+    .is-left
+      left: 4%
+
+    +mq($until: tablet)
+      top: 2%
+      height: 96%
+      width: 98%
+
+    +mq($from: tablet)
+      top: 8%
+      height: 84%
+      width: 97%
+
+
+  &.is-left
+    &:before
+      left: 4%
+
+
+  &.sec-color
+    &:before
+      border-color: $red
+
+    h2
+      color: $blue
 
   .section-wrapper
     width: 100%
@@ -23,44 +56,24 @@
     justify-content: center
     position: relative
 
-  
-  &:before 
-    content: ""
-    position: absolute
-    border: 2px solid $blue
-    z-index: 1
-    
-    +mq($until: tablet)
-      top: 2%
-      right: 4%
-      height: 96%
-      width: 98%
-    
-    +mq($from: tablet)
-      top: 8%
-      right: 4%
-      height: 84%
-      width: 97%
-  
-
-  &__text 
+  &__text
     z-index: 1
     text-align: center
-    
+
 
     +mq($until: tablet)
       width: 100%
       padding: 8%
-    
+
 
     +mq($from: tablet)
       height: 100%
       width: 50%
       padding: 6% 30px
-    
-  
 
-  &__wrapper 
+
+
+  &__wrapper
     perspective: 500
     +mq($from: tablet)
       padding: 0 2%
@@ -68,18 +81,21 @@
       margin: 0 auto
       position: relative
       top: 50%
-      
-    
-  
 
-  &__image 
+
+
+
+  &__image
+    .is-left &
+      order: -1
+
     +mq($until: tablet)
       width: 100%
-    
+
 
     +mq($from: tablet)
       width: 50%
 
-  img 
+  img
     display: block
     width: 100%
