@@ -1,7 +1,7 @@
 Template.gridEnd.rendered = function () {
   // setTimeout(function(){
     var initialize = _.once(function(){
-      var gridwaypoint = $('.tweet, .instagram, .imageSection').waypoint({
+      var gridwaypoint = $('.tweet, .instagram, .imageSection, .codepen').waypoint({
         handler: function(direction) {
           if (direction === 'down') {
             $(this).addClass("visible")

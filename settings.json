@@ -1,0 +1,20 @@
+{
+  "orion-cli": {
+    "profile": "es6",
+    "config": "private/orion-config.json"
+  },
+  "twitter": {
+    "consumer_key": "vgvcfSxjHofOyDzAr0gYs79jL",
+    "consumer_secret": "Nypv8Jl44yDdrQCIN2Qi8a8izfgNHWLSYng4CzXEpOGWUNxPrU",
+    "access_token": "837964716-R4DgWcmdviJHuOS1jxeA729PW8WSIfGMi5VTdpQX",
+    "access_token_secret": "BucLqGNlXZGMdpH4YyoRUprkFkiYUkTfNVuCeh6e7LDgF"
+  },
+  "instagram": {
+    "access_token": "37537792.83170d2.5be7c5d4897241b6849195cb2501b1f6"
+  },
+  "public": {
+        "ga": {
+            "id": "UA-63838966-1"
+        }
+    }
+}
