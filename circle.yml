@@ -1,9 +1,16 @@
+machine:
+  pre:
+    - curl -o meteor_install_script.sh https://install.meteor.com/
+    - chmod +x meteor_install_script.sh
+    - sed -i "s/type sudo >\/dev\/null 2>&1/\ false /g" meteor_install_script.sh
+    - ./meteor_install_script.sh
+    - export PATH=$PATH:~/.meteor/
+    - meteor --version
+
+
 ## Customize deployment commands
 deployment:
   production:
     branch: master
     commands:
       - git push scalingo master
-
-
-
