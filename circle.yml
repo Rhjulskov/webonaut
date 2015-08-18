@@ -1,0 +1,9 @@
+## Customize deployment commands
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push scalingo master
+
+
+
