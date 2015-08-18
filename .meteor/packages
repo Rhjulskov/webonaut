@@ -23,7 +23,9 @@ fourseven:scss
 grigio:babel
 mquandalle:jade
 momentjs:moment
-spiderable
+ongoworks:spiderable
+dfischer:phantomjs
+
 manuelschoebel:ms-seo
 reywood:iron-router-ga
 meteortoys:allthings
