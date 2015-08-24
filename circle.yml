@@ -10,6 +10,5 @@ deployment:
   production:
     branch: master
     commands:
-        - export MODULUS_TOKEN=$MODULUS
         - modulus deploy -p "webonaut"
       ##- git push scalingo master
