@@ -1,8 +1,8 @@
 machine:
   pre:
-    - curl -o meteor_install_script.sh https://install.meteor.com/
- ##   - npm install -g modulus
-    - git remote add scalingo git@scalingo.com:webonaut.git
+    - curl  https://install.meteor.com/ | sh
+    - npm install -g modulus
+ ##   - git remote add scalingo git@scalingo.com:webonaut.git
 
 
 
