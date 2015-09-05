@@ -1,7 +1,7 @@
 {
   "Atoms": {
     "templates": [
-      { 
+      {
         "name": "sgcolors",
         "data": [
           {
@@ -43,19 +43,22 @@
         ]
       },
       {"name": "sgfonts"},
-      {"name": "spinner"},
-      {"name": "logo"},
-      {"name": "logoBlue"},
-      {"name": "logoBlueSmall"},
-      {"name": "logoRed"},
-      {"name": "logoRedSmall"},
       {
         "name": "button",
         "data": {
           "text": "button text",
           "color":"btn_color"
         }
-      }
+      },
+      {
+        "name": "spinner",
+        "centered": true
+      },
+      {"name": "logo"},
+      {"name": "logoBlue"},
+      {"name": "logoBlueSmall"},
+      {"name": "logoRed"},
+      {"name": "logoRedSmall"}
     ]
   },
   "Molecules": {
@@ -72,11 +75,10 @@
           "image": "http://www.placehold.it/400x400"
         }
       },
-      {"name": "textarea"},
       {
         "name": "twitter",
         "data": {
-          "text": "lorem ipsum dolor sit" 
+          "text":  "My long but short tweet from twitter."
         }
       }
     ]
@@ -101,7 +103,6 @@
         }
       },
       {"name": "footer"}
-      
     ]
   }
 }
