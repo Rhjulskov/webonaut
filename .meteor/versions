@@ -19,6 +19,7 @@ deps@1.0.7
 dfischer:phantomjs@1.0.4
 ejson@1.0.6
 fastclick@1.0.3
+fortawesome:fontawesome@4.4.0
 fourseven:scss@1.2.3
 geojson-utils@1.0.3
 grigio:babel@0.1.6
