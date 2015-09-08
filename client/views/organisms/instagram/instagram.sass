@@ -4,42 +4,42 @@
 
 @import ../../../stylesheets/init
 
-.instagram 
+.image-element
   position: relative
   display: flex
   align-items: center
   transform-style: preserve-3d
   perspective: 1000px
-  
+
   +mq($until: tablet)
     width: 100%
-    
+
     &:nth-child(odd)
       .img-wrapper
         order: 2
 
-      h3 
+      h3
         order: 1
-        transform: translateX(100%) 
+        transform: translateX(100%)
 
     &.visible
       &:nth-child(odd)
 
-        h3 
-          transform: translateX(50%) 
+        h3
+          transform: translateX(50%)
 
         &:hover
           h3
-            transform: translateX(0%) 
+            transform: translateX(0%)
 
-  
+
   +mq($from: tablet)
     width: 50%
 
     &:nth-child(3n)
       margin: 0 25%
-  
-      
+
+
   .time-stamp
     position: absolute
     top: 100%
@@ -51,7 +51,7 @@
     margin-top: -40px
     font-family: $base-font-family
     font-size: 14px
-  
+
   .img-wrapper
     position: relative
     backface-visibility: hidden
@@ -61,9 +61,9 @@
     transition: $a-time all $a-easing
     transform: rotateX(-100deg)
     transform-origin: center top
-    transform-style: preserve-3d  
+    transform-style: preserve-3d
     background-color: $blue
-  
+
   img,
   video
     position: relative
@@ -82,9 +82,9 @@
     width: 40%
     margin: 0 5%
     opacity: 0
-    transform: translateX(-100%) 
+    transform: translateX(-100%)
     transition: $a-time all $a-easing
-    
+
     padding: 10px
 
     +mq($until: tablet)
@@ -96,13 +96,13 @@
       border: 3px solid $red
 
 
-  &.visible 
+  &.visible
     .img-wrapper
       transform: rotateX(0deg)
       opacity: 1
 
     h3
-      transform: translateX(-50%) 
+      transform: translateX(-50%)
       opacity: 1
 
     &:hover
@@ -113,7 +113,7 @@
         opacity: 1
 
       h3
-        transform: translateX(0) 
+        transform: translateX(0)
         color: $blue
         border-color: $blue
 
@@ -124,8 +124,3 @@
         filter: grayscale(0%)
         opacity: 1
         box-shadow: -20px 20px 0px 0px rgba($blue , .5)
-        
-
-
-
-
