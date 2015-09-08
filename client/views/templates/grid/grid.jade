@@ -11,10 +11,12 @@ template(name="grid")
         +instagram
       else if grid__end
         +gridEnd
-      else if type
+      else if $eq type "codepen"
         +codepen
-      else
+      else if $eq type "twitter"
         +twitter
+      else if $eq type "medium"
+        +medium
 
     //- each codepens
     //-   +codepen src=src
