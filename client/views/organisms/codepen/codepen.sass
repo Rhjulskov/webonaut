@@ -1,0 +1,39 @@
+//------------------------------------*\
+//    #codepen
+//------------------------------------*/
+
+@import ../../../stylesheets/init
+
+
+.grid-element
+
+  &.codepen
+    position: relative
+    perspective: 1000px
+    overflow: hidden
+
+
+    +mq($until: tablet)
+      width: 100%
+      padding-top: 80%
+
+    +mq($from: tablet)
+      width: 50%
+      padding-top: 40%
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      height: 100% !important
+      width: 100% !important
+      transition: $a-time all $a-easing
+      opacity: 0
+      transform: rotateX(-100deg)
+      transform-origin: center top
+      transform-style: preserve-3d
+
+  &.visible
+    iframe
+      opacity: 1
+      transform: rotateX(0deg)

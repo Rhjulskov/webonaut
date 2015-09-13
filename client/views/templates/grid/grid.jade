@@ -7,13 +7,17 @@ template(name="grid")
         h3.slide-up {{subheader}}
 
     each socialFeeds
-      if image
+      if $eq type "image"
         +instagram
       else if grid__end
         +gridEnd
-      else
+      else if $eq type "codepen"
+        +codepen
+      else if $eq type "twitter"
         +twitter
-    
+      else if $eq type "medium"
+        +medium
+
     //- each codepens
     //-   +codepen src=src
-    //-   
+    //-
