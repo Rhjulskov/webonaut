@@ -76,6 +76,13 @@
         }
       },
       {
+        "name": "medium",
+        "data": {
+          "text": "Medium title goes here",
+          "image":"//placehold.it/800x800"
+        }
+      },
+      {
         "name": "twitter",
         "data": {
           "text":  "My long but short tweet from twitter."
