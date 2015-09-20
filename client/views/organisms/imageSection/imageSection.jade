@@ -1,4 +1,6 @@
 template(name="imageSection")
+  // @hubble Variable image_position can be either left or right. sec_color can be true to toggle secondary color state
+  
   section.imageSection(data-midnight="default" class="{{#if image_position}}is-left{{/if}} {{#if sec_color}}sec-color{{/if}}")
     .section-wrapper
       .imageSection__text
@@ -14,5 +16,3 @@ template(name="imageSection")
       if image_src
         .imageSection__image
           img(src=image_src alt=image_alt)
-
-
