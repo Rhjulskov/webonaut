@@ -9,9 +9,9 @@ Template['grid'].helpers({
         },
         {
           "type": "medium",
-          "image": "https://cdn-images-1.medium.com/proxy/gradv/20/81/55/darken/10/1*lhY4xybDL_6FfB1BBrz7lA.jpeg",
+          "image": "/velocity_test.png",
           "text": "How to test you Meteor app with Velocity and Cucumber",
-          "link_href": "//medium.com/twenty-years-in-the-valley/one-of-the-biggest-mistakes-i-ve-made-in-my-career-72bf27c538b4",
+          "link_href": "//medium.com/@rasmushjulskov/how-to-test-your-meteor-app-with-velocity-and-cucumber-3c9290660258",
           "published_date": 1441670400
         }
     ]
