@@ -9,8 +9,8 @@ Template['grid'].helpers({
         },
         {
           "type": "medium",
-          "image": "/velocity_test.png",
-          "text": "How to test you Meteor app with Velocity and Cucumber",
+          "image": "/velocity_medium_rasmus_hjulskov.jpg",
+          "text": "How to test your Meteor app with Velocity and Cucumber",
           "link_href": "//medium.com/@rasmushjulskov/how-to-test-your-meteor-app-with-velocity-and-cucumber-3c9290660258",
           "published_date": 1441670400
         }
