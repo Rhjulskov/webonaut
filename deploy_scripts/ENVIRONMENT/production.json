@@ -1,0 +1,7 @@
+{
+  "ROOT_URL": "",
+  "NODE_ENV": "production",
+  "MONGO_URL": "",
+  "MONGO_OPLOG_URL": "/local?authSource=meteor",
+  "METEOR_PKG_SPIDERABLE_PHANTOMJS_ARGS": "--ignore-ssl-errors=yes"
+}
