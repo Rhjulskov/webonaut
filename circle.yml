@@ -1,15 +1,41 @@
 machine:
-  pre:
-    - curl  https://install.meteor.com/ | sh
-    - npm install -g modulus
- ##   - git remote add scalingo git@scalingo.com:webonaut.git
+  services:
+    - docker
 
+general:
+  artifacts:
+    - "/home/ubuntu/verft/.meteor/local/log"
 
+dependencies:
+  cache_directories:
+      - "~/.meteor"
+      - "~/.npm"
 
-## Customize deployment commands
+  override:
+    - docker info
+    #- npm install -g velocity-cli
+    #- npm install -g modulus
+
+    - ./deploy_scripts/lib/install-dependencies.sh
+
+    # -- CACHE METEOR --
+    # Restore meteor symlink when Meteor was restored from the cache
+    - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
+    # Download Meteor if isn't already installed via the cache
+    - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+
+#test:
+  #override:
+    #- mkdir -p $CIRCLE_TEST_REPORTS/cucumber
+    #- ./deploy_scripts/lib/test.sh
+
 deployment:
-  production:
-    branch: master
+  hub:
+    branch: 'master'
     commands:
-        - modulus deploy -p "webonaut"
-      ##- git push scalingo master
+      - docker build -t webonaut .
+      - docker login -e mail@nordlys.io -u nordlys -p NavitasRaket123 tutum.co
+      - docker login -e mail@nordlys.io -u nordlys -p NavitasRaket123
+      - docker tag webonaut tutum.co/nordlys/webonaut
+      - docker push tutum.co/nordlys/webonaut
+
