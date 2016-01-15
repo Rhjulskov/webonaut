@@ -74,7 +74,6 @@ mquandalle:jade-compiler@0.4.5
 npm-container@1.1.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
-okgrow:iron-router-autoscroll@0.0.11
 okgrow:router-autoscroll@0.1.4
 ongoworks:spiderable@1.0.7
 ordered-dict@1.0.4

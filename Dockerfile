@@ -8,7 +8,7 @@ FROM quay.io/chriswessels/meteor-tupperware
 MAINTAINER nordlys <rh@nordlys.io>
 
 # (optional) Bake runtime options into your image
-ENV MONGO_URL="mongodb://webonaut-1217:dW27Sc3uYoeeysrva6A_@webonaut-1217.mongo.dbs.appsdeck.eu:30557/webonaut-1217" ROOT_URL="http://webonaut.dk" METEOR_SETTINGS='{"orion-cli": {"profile": "es6","config": "private/orion-config.json"},"twitter": {"consumer_key": "vgvcfSxjHofOyDzAr0gYs79jL","consumer_secret": "Nypv8Jl44yDdrQCIN2Qi8a8izfgNHWLSYng4CzXEpOGWUNxPrU","access_token": "837964716-R4DgWcmdviJHuOS1jxeA729PW8WSIfGMi5VTdpQX","access_token_secret": "BucLqGNlXZGMdpH4YyoRUprkFkiYUkTfNVuCeh6e7LDgF"},"instagram": {"access_token": "37537792.83170d2.5be7c5d4897241b6849195cb2501b1f6"},"public": {"ga": {"id": "UA-63838966-1"}}}'
+ENV MONGO_URL="mongodb://rasmus:rasmus@ds033103.mongolab.com:33103/webonaut" ROOT_URL="http://webonaut.dk" METEOR_SETTINGS='{"orion-cli": {"profile": "es6","config": "private/orion-config.json"},"twitter": {"consumer_key": "vgvcfSxjHofOyDzAr0gYs79jL","consumer_secret": "Nypv8Jl44yDdrQCIN2Qi8a8izfgNHWLSYng4CzXEpOGWUNxPrU","access_token": "837964716-R4DgWcmdviJHuOS1jxeA729PW8WSIfGMi5VTdpQX","access_token_secret": "BucLqGNlXZGMdpH4YyoRUprkFkiYUkTfNVuCeh6e7LDgF"},"instagram": {"access_token": "37537792.83170d2.5be7c5d4897241b6849195cb2501b1f6"},"public": {"ga": {"id": "UA-63838966-1"}}}'
 
 
 
@@ -17,3 +17,4 @@ ENV MONGO_URL="mongodb://webonaut-1217:dW27Sc3uYoeeysrva6A_@webonaut-1217.mongo.
 #-e MONGO_URL=mongodb://nordlys:123123123@ds047504.mongolab.com:47504/rawmilk-players1st-docker/meteor \
 #-p 8080:80 \
 #nordlys/rawmilk-players1st
+
